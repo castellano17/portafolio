@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="text-tertiary">
+    <div className="text-tertiary" id="about">
       About Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente
       aperiam sint at ut eum quae vel laboriosam itaque veniam harum beatae, ad
       corrupti fuga nemo quia non, perferendis quaerat error hic adipisci

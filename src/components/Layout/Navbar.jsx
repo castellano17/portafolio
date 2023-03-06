@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
+
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -9,27 +11,59 @@ const Navbar = () => {
         <div className="ml-4">
           <div>
             {/* Link principal */}
-            <Link>
-              <div href="#">
+            <RouterLink>
+              <div>
                 <img className="inline-block  h-16 w-14" src="/logoEsmir.png" />
               </div>
-            </Link>
+            </RouterLink>
           </div>
         </div>
 
         {/* Menú horizontal */}
         <div className="hidden md:flex md:items-center">
           <div className="mx-4 text-xl cursor-pointer py-3 hover:text-tertiary hover:scale-110">
-            <Link to="/">Inicio</Link>
+            <ScrollLink
+              to="home"
+              spy={true}
+              smooth={true}
+              offset={-150}
+              duration={500}
+            >
+              Inicio
+            </ScrollLink>
           </div>
           <div className="mx-4 text-xl cursor-pointer py-3 hover:text-tertiary hover:scale-110">
-            <Link to="/about">Sobre mi</Link>
+            <ScrollLink
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+            >
+              Sobre mi
+            </ScrollLink>
           </div>
           <div className="mx-4 text-xl cursor-pointer py-3 hover:text-tertiary hover:scale-110">
-            <Link to="/feactured">Proyectos</Link>
+            <ScrollLink
+              to="feactured"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+            >
+              Proyectos
+            </ScrollLink>
           </div>
           <div className="mx-4 text-xl cursor-pointer py-3 hover:text-tertiary hover:scale-110">
-            <Link to="/contact">Contacto</Link>
+            <ScrollLink
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+            >
+              Contacto
+            </ScrollLink>
           </div>
         </div>
 
@@ -64,25 +98,25 @@ const Navbar = () => {
               className="text-center text-xl hover:bg-primary cursor-pointer py-3 mb-2"
               onClick={() => setMenuOpen(false)}
             >
-              <Link to="/">Inicio</Link>
+              <RouterLink to="/">Inicio</RouterLink>
             </div>
             <div
               className="text-center text-xl hover:bg-primary cursor-pointer py-3 mb-2"
               onClick={() => setMenuOpen(false)}
             >
-              <Link to="/about">Sobre mi</Link>
+              <RouterLink to="/about">Sobre mi</RouterLink>
             </div>
             <div
               className="text-center text-xl hover:bg-primary cursor-pointer py-3 mb-2"
               onClick={() => setMenuOpen(false)}
             >
-              <Link to="/feactured">Proyectos</Link>
+              <RouterLink to="/feactured">Proyectos</RouterLink>
             </div>
             <div
               className="text-center text-xl hover:bg-primary cursor-pointer py-3 mb-2"
               onClick={() => setMenuOpen(false)}
             >
-              <Link to="/contact">Contacto</Link>
+              <RouterLink to="/contact">Contacto</RouterLink>
             </div>
           </div>
         </div>
