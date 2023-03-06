@@ -11,10 +11,8 @@ const Navbar = () => {
         <div className="ml-4">
           <div>
             {/* Link principal */}
-            <RouterLink>
-              <div>
-                <img className="inline-block  h-16 w-14" src="/logoEsmir.png" />
-              </div>
+            <RouterLink to="/">
+              <img className="inline-block  h-16 w-14" src="/logoEsmir.png" />
             </RouterLink>
           </div>
         </div>
