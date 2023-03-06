@@ -6,7 +6,7 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="bg-primary py-2  sticky top-0 left-0 right-0 shadow-custom ">
+    <div className="bg-primary py-2  fixed top-0 left-0 right-0 shadow-custom z-3 ">
       <nav className=" mx-auto max-w-custom h-20 flex justify-between items-center ">
         <div className="ml-4">
           <div>
