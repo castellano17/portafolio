@@ -2,18 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .max-w-custom {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap");
 
 body {
   margin: 0;
   color: #dde0e5;
-  font-family: var(--fuentePrincipal);
+  font-family: "Rubik", sans-serif;
 }
 
 html {
   box-sizing: border-box;
   color: #dde0e5;
-  font-family: var(--fuentePrincipal);
 }
 *,
 *::after,

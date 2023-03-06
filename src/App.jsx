@@ -12,7 +12,7 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="App mt-20">
+    <div className="App">
       <Navbar />
       <div className="container-links mt-12">
         {/* <Link to="/">Home</Link>

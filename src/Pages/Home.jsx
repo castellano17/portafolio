@@ -2,8 +2,9 @@ import React from "react";
 
 const Home = () => {
   return (
-    <div>
-      <h2 className="color-tertiary">
+    <div className="text-tertiary">
+      <h1>Home</h1>
+      <h2>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum
         voluptatibus voluptatem repellendus nisi labore facere necessitatibus
         fuga itaque ad qui ullam enim recusandae aliquid molestias autem porro

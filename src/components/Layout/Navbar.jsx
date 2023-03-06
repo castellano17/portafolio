@@ -1,29 +1,93 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-3 w-full bg-primary shadow-md">
-      <div className="h-20 flex justify-between items-center mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="h-8 flex justify-center items-center no-underline">
-          {/* Link principal */}
-          <Link>
-            <a href="#">
-              <span>E</span>
-              <span>R</span>
-              <span>.</span>
-            </a>
-          </Link>
+    <div className="bg-primary py-2  sticky top-0 left-0 right-0 shadow-custom ">
+      <nav className=" mx-auto max-w-custom h-20 flex justify-between items-center ">
+        <div className="ml-4">
+          <div>
+            {/* Link principal */}
+            <Link>
+              <div href="#">
+                <img className="inline-block  h-16 w-14" src="/logoEsmir.png" />
+              </div>
+            </Link>
+          </div>
         </div>
-        {/* container link */}
-        <div>
-          <Link to="/"> Inicio </Link>
-          <Link to="/about"> Sobre mi </Link>
-          <Link to="/feactured"> Proyectos </Link>
-          <Link to="/contact"> Contacto </Link>
+
+        {/* Menú horizontal */}
+        <div className="hidden md:flex md:items-center">
+          <div className="mx-4 text-xl cursor-pointer py-3 hover:text-tertiary hover:scale-110">
+            <Link to="/">Inicio</Link>
+          </div>
+          <div className="mx-4 text-xl cursor-pointer py-3 hover:text-tertiary hover:scale-110">
+            <Link to="/about">Sobre mi</Link>
+          </div>
+          <div className="mx-4 text-xl cursor-pointer py-3 hover:text-tertiary hover:scale-110">
+            <Link to="/feactured">Proyectos</Link>
+          </div>
+          <div className="mx-4 text-xl cursor-pointer py-3 hover:text-tertiary hover:scale-110">
+            <Link to="/contact">Contacto</Link>
+          </div>
         </div>
-      </div>
-    </nav>
+
+        {/* botón del menú hamburguesa*/}
+        <div
+          className="ml-4 md:hidden cursor-pointer text-5xl mr-12 "
+          onClick={() => setMenuOpen(true)}
+        >
+          <i className="bx bx-menu "></i>
+        </div>
+
+        <div
+          className={`${
+            !menuOpen && "hidden"
+          } bg-gray-600/50 min-h-screen w-full fixed top-0 left-0 right-0 backdrop-blur-sm`}
+          onClick={() => setMenuOpen(false)}
+        ></div>
+
+        <div
+          className={`${
+            menuOpen ? "w-80" : "w-0"
+          } bg-tertiary min-h-screen fixed top-0 left-0 transition-all duration-300`}
+        >
+          <div className={`${!menuOpen && "hidden"} pt-3`}>
+            <button
+              className="ml-4 mb-14 text-2xl"
+              onClick={() => setMenuOpen(false)}
+            >
+              <i className="bx bx-x"></i>
+            </button>
+            <div
+              className="text-center text-xl hover:bg-primary cursor-pointer py-3 mb-2"
+              onClick={() => setMenuOpen(false)}
+            >
+              <Link to="/">Inicio</Link>
+            </div>
+            <div
+              className="text-center text-xl hover:bg-primary cursor-pointer py-3 mb-2"
+              onClick={() => setMenuOpen(false)}
+            >
+              <Link to="/about">Sobre mi</Link>
+            </div>
+            <div
+              className="text-center text-xl hover:bg-primary cursor-pointer py-3 mb-2"
+              onClick={() => setMenuOpen(false)}
+            >
+              <Link to="/feactured">Proyectos</Link>
+            </div>
+            <div
+              className="text-center text-xl hover:bg-primary cursor-pointer py-3 mb-2"
+              onClick={() => setMenuOpen(false)}
+            >
+              <Link to="/contact">Contacto</Link>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
   );
 };
 

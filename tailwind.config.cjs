@@ -3,10 +3,13 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      boxShadow: {
+        custom: "0px 2px 5px 2px rgba(0,0,0,0.19)",
+      },
       colors: {
-        primary: "#3f4452",
-        secondary: "#484e5c",
-        tertiary: "#0f5d44",
+        primary: "#232532",
+        secondary: "#303646",
+        tertiary: " #0d6ca0",
         white: "#dde0e5",
       },
       fontFamily: {
@@ -14,5 +17,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("postcss-nesting"), require("@tailwindcss/typography")],
 };
