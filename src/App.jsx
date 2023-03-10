@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <div className="container-links mt-12">
+      <div>
         {/* <Link to="/">Home</Link>
         <Link to="/about">About</Link>
         <Link to="/feactured">Feactured</Link>

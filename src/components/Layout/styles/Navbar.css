@@ -65,6 +65,10 @@
     margin-left: auto;
   }
 
+  .navbar__menu-hamburguesa-buttom:hover {
+    color: var(--tertiary);
+  }
+
   .navbar__link-horizontal {
     display: none;
   }
@@ -81,19 +85,24 @@
     justify-content: center;
     text-align: center;
     padding: 32px 0;
-    gap: 3rem;
+    gap: 16px;
     background-color: var(--primary);
     /* border-bottom: 2px solid var(--tertiary);
     border-top: 2px solid var(--tertiary); */
     box-shadow: inset 0px 0px 9px 0px rgba(0, 0, 0, 1);
+    font-size: 35px;
   }
   .navbar__menu a:hover {
     color: var(--tertiary);
+    margin-bottom: 10px;
   }
 
   .navbar__close {
     margin-left: 80%;
-    font-size: 25px;
+    font-size: 30px;
+    background-color: transparent;
+    border: none;
+    color: var(--white);
   }
   .navbar__close:hover {
     color: var(--tertiary);
