@@ -7,8 +7,8 @@ import "./styles/Home.css";
 const Home = () => {
   return (
     <>
-      <header id="home">
-        <div>
+      <header id="home" className="header__home">
+        <div className="header__home-left">
           <div>
             <img src="/code.png" alt="Logo header" />
           </div>
@@ -29,7 +29,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div>
+        <div className="header__home-right">
           <p>Hola!, soy un</p>
           <h2>Desarrollador web From-end de Nicaragua</h2>
           <p>
