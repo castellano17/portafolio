@@ -72,3 +72,20 @@
     width: 90vw;
   }
 }
+
+.icon-social {
+  display: flex;
+  gap: 16px;
+}
+
+.icon-social a {
+  transition: 0.2s ease all;
+}
+
+.icon-social a:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.header__home-right > p {
+  margin: 0;
+}

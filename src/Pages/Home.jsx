@@ -19,7 +19,7 @@ const Home = () => {
           </h1>
 
           <div></div>
-          <div>
+          <div className="icon-social">
             <a href="https://www.linkedin.com/in/esmir-roque/" target="_blank">
               <img src="/linkedin.png" alt="Linkedin Social Media" />
             </a>
