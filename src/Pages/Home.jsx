@@ -32,7 +32,7 @@ const Home = () => {
         <div className="header__home-right">
           <p>Hola!, soy un</p>
           <h2>Desarrollador web From-end de Nicaragua</h2>
-          <p>
+          <p className="header__home-description">
             Amante de su profesión y especializado en el desarrollo web Fron-end
             con estilos frescos y únicos. Actualmente me encuentro mejorando mis
             hablidades en Noje js para ampliar y mejorar mis halilidades

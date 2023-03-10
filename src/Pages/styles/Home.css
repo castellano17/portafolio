@@ -89,3 +89,24 @@
 .header__home-right > p {
   margin: 0;
 }
+
+.header__home-right > p:first-child {
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+.header__home-description {
+  text-align: left;
+  font-size: 18px;
+}
+
+.header__home-right > a {
+  display: block;
+  padding-top: 2rem;
+  color: var(--terciario);
+}
+
+.header__home-right > a > img {
+  width: 1.5rem;
+  height: auto;
+}
