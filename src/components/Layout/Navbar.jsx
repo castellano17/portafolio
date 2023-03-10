@@ -1,64 +1,81 @@
 import React, { useState } from "react";
 import { Link as RouterLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
+import "./styles/Navbar.css";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const handleMenuOpen = () => {
+    if (menuOpen) {
+      setMenuOpen(false);
+    } else {
+      setMenuOpen(true);
+    }
+  };
+
+  const handleCloseMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
-    <div className="bg-primary py-2  fixed top-0 left-0 right-0 shadow-custom z-3 ">
-      <nav className=" mx-auto max-w-custom h-20 flex justify-between items-center ">
-        <div className="ml-4">
+    <div className="navbar__container ">
+      <nav className="navbar ">
+        <div>
           <div>
             {/* Link principal */}
             <RouterLink to="/">
-              <img className="inline-block  h-16 w-14" src="/logoEsmir.png" />
+              <img className="logo" src="/logoEsmir.png" />
             </RouterLink>
           </div>
         </div>
 
         {/* Menú horizontal */}
-        <div className="hidden md:flex md:items-center">
-          <div className="mx-4 text-xl cursor-pointer py-3 hover:text-tertiary hover:scale-110">
+        <div className="navbar__link-horizontal">
+          <div>
             <ScrollLink
               to="home"
               spy={true}
               smooth={true}
               offset={-150}
               duration={500}
+              className="scroll-link"
             >
               Inicio
             </ScrollLink>
           </div>
-          <div className="mx-4 text-xl cursor-pointer py-3 hover:text-tertiary hover:scale-110">
+          <div className="">
             <ScrollLink
               to="about"
               spy={true}
               smooth={true}
               offset={-100}
               duration={500}
+              className="scroll-link"
             >
               Sobre mi
             </ScrollLink>
           </div>
-          <div className="mx-4 text-xl cursor-pointer py-3 hover:text-tertiary hover:scale-110">
+          <div className="">
             <ScrollLink
               to="feactured"
               spy={true}
               smooth={true}
               offset={-100}
               duration={500}
+              className="scroll-link"
             >
               Proyectos
             </ScrollLink>
           </div>
-          <div className="mx-4 text-xl cursor-pointer py-3 hover:text-tertiary hover:scale-110">
+          <div className="">
             <ScrollLink
               to="contact"
               spy={true}
               smooth={true}
               offset={-100}
               duration={500}
+              className="scroll-link"
             >
               Contacto
             </ScrollLink>
@@ -67,53 +84,29 @@ const Navbar = () => {
 
         {/* botón del menú hamburguesa*/}
         <div
-          className="ml-4 md:hidden cursor-pointer text-5xl mr-12 "
-          onClick={() => setMenuOpen(true)}
+          className="navbar__menu-hamburguesa-buttom"
+          onClick={handleMenuOpen}
         >
           <i className="bx bx-menu "></i>
         </div>
 
-        <div
-          className={`${
-            !menuOpen && "hidden"
-          } bg-gray-600/50 min-h-screen w-full fixed top-0 left-0 right-0 backdrop-blur-sm`}
-          onClick={() => setMenuOpen(false)}
-        ></div>
+        <div onClick={handleCloseMenu}></div>
 
-        <div
-          className={`${
-            menuOpen ? "w-80" : "w-0"
-          } bg-tertiary min-h-screen fixed top-0 left-0 transition-all duration-300`}
-        >
-          <div className={`${!menuOpen && "hidden"} pt-3`}>
-            <button
-              className="ml-4 mb-14 text-2xl"
-              onClick={() => setMenuOpen(false)}
-            >
+        <div className={`navbar__menu ${menuOpen ? "active" : ""}`}>
+          <div>
+            <button className="navbar__close" onClick={handleCloseMenu}>
               <i className="bx bx-x"></i>
             </button>
-            <div
-              className="text-center text-xl hover:bg-primary cursor-pointer py-3 mb-2"
-              onClick={() => setMenuOpen(false)}
-            >
+            <div onClick={handleCloseMenu}>
               <RouterLink to="/">Inicio</RouterLink>
             </div>
-            <div
-              className="text-center text-xl hover:bg-primary cursor-pointer py-3 mb-2"
-              onClick={() => setMenuOpen(false)}
-            >
+            <div className="" onClick={handleCloseMenu}>
               <RouterLink to="/about">Sobre mi</RouterLink>
             </div>
-            <div
-              className="text-center text-xl hover:bg-primary cursor-pointer py-3 mb-2"
-              onClick={() => setMenuOpen(false)}
-            >
+            <div className="" onClick={handleCloseMenu}>
               <RouterLink to="/feactured">Proyectos</RouterLink>
             </div>
-            <div
-              className="text-center text-xl hover:bg-primary cursor-pointer py-3 mb-2"
-              onClick={() => setMenuOpen(false)}
-            >
+            <div className="" onClick={handleCloseMenu}>
               <RouterLink to="/contact">Contacto</RouterLink>
             </div>
           </div>
