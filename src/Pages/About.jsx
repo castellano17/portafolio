@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div id="about">
+    <div id="about" className="shadowBg">
       About Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente
       aperiam sint at ut eum quae vel laboriosam itaque veniam harum beatae, ad
       corrupti fuga nemo quia non, perferendis quaerat error hic adipisci

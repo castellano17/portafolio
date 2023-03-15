@@ -90,7 +90,8 @@
 .icon-social {
   display: flex;
   gap: 16px;
-  font-size: 50px;
+  width: 100px;
+  margin-top: 80px;
 }
 
 .icon-social a {

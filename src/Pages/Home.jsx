@@ -21,10 +21,10 @@ const Home = () => {
           <div></div>
           <div className="icon-social">
             <a href="https://www.linkedin.com/in/esmir-roque/" target="_blank">
-              <img src="/linkedin.png" alt="Linkedin Social Media" />
+              <img src="/linkedin-logo-240.png" alt="Linkedin Social Media" />
             </a>
             <a href="https://github.com/castellano17" target="_blank">
-              <img src="/github.png" alt="Github Repository" />
+              <img src="/github-logo-240.png" alt="Github Repository" />
             </a>
           </div>
         </div>
