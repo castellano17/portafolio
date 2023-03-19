@@ -1,0 +1,156 @@
+.about {
+  padding-top: 64px;
+  height: 100%;
+}
+
+.about-me {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (max-width: 998px) {
+  .about-me {
+    padding: 0 5vw;
+  }
+}
+
+.about-me h3 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+.about-me h3 span {
+  color: var(--tertiary);
+  font-size: 32px;
+}
+
+.about-me > p {
+  border-left: 5px solid var(--tertiary);
+  padding: 0 10px;
+  text-align: left;
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+
+.arrow-about {
+  color: var(--tertiary);
+}
+
+/* .about__button {
+  margin-bottom: 50px;
+} */
+
+.about-me a {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--tertiary);
+  width: 240px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-color: var(--tertiary);
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 35px;
+  transition: 0.3s;
+}
+
+.about-me a:hover {
+  transform: scale(1.05, 1.05);
+}
+
+.about-me a img {
+  width: 32px;
+  height: auto;
+  animation: 5s infinite flotar;
+}
+
+.about-me a P {
+  color: var(--white);
+  padding: 0;
+  display: inline-block;
+  margin: 0;
+}
+
+@keyframes flotar {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(0, -3px);
+  }
+  75% {
+    transform: translate(0, 3px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.container-skills {
+  margin: 0 auto;
+  max-width: 500px;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 64px;
+  margin-bottom: 32px;
+}
+
+/* studies */
+
+.studies {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 32px;
+}
+
+.studies h3 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.studies h3 span {
+  color: var(--tertiary);
+}
+
+.studies__container {
+  padding: 0 32px 40px 32px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.studies__list {
+  text-align: center;
+  width: 250px;
+  height: 300px;
+  background-color: var(--secondary);
+  padding: 40px 48px;
+  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 4px;
+}
+
+.studies__list:hover {
+  transform: scale(1.05, 1.05);
+  background-color: var(--tertiary);
+}
+
+.studies__list img {
+  width: 70px;
+}
+
+.studies__list p {
+  font-size: 20px;
+  padding: 10px;
+}
+
+.studies__list h4 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
