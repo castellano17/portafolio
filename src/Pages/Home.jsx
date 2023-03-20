@@ -29,7 +29,7 @@ const Home = () => {
             </a>
 
             <a
-              href="https://wa.me/50586151276?text=Hola,%20estoy%20interesado%20en%20tus%20servicios"
+              href="https://wa.me/50586498505?text=Hola,%20estoy%20interesado%20en%20tus%20servicios"
               target="_blank"
               className="whatsapp-button"
             >
