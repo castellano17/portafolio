@@ -1,0 +1,26 @@
+.feactured {
+  padding-top: 48px;
+  background-color: var(--primary);
+  padding-bottom: 32px;
+}
+
+.feactured h3 {
+  text-align: center;
+  font-size: 32px;
+}
+
+.feactured span {
+  color: var(--tertiary);
+}
+
+.feactured__container {
+  font-size: 36px;
+  gap: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 16px;
+}

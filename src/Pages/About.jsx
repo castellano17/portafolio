@@ -39,7 +39,7 @@ const About = () => {
           </p>
         </section>
         <div className="about__button">
-          <a href="./assets/CV-español-canvas.pdf">
+          <a href="/EsmirRoque.pdf " target="_blank">
             <img src="./img/descargacv.png" alt="descargar cv" />
             <p>Download CV</p>
           </a>
@@ -54,8 +54,39 @@ const About = () => {
           <div className="studies__list">
             <img src="./img/platzi.webp" alt="" />
             <h4>Platzi</h4>
-            <p>2021-2021</p>
+            <p>2023-2023</p>
             <p>Curso de Programación Básica</p>
+          </div>
+
+          <div className="studies__list">
+            <img src="./img/logo_academlo.png" alt="" />
+            <h4>Academlo</h4>
+            <p>2022-2023</p>
+            <p>Fundamentos de desarrollo web</p>
+          </div>
+          <div className="studies__list">
+            <img src="./img/logo_academlo.png" alt="" />
+            <h4>Academlo</h4>
+            <p>2023-2023</p>
+            <p>Desarrollo de aplicaciones web con React</p>
+          </div>
+          <div className="studies__list">
+            <img src="./img/Microsoft-logo.jpg" alt="" />
+            <h4>Microsoft</h4>
+            <p>2020-2020</p>
+            <p>Certificación Internacional Data Analyst Associate</p>
+          </div>
+          <div className="studies__list">
+            <img src="./img/ceabad.jpg" alt="" />
+            <h4>CEABAD</h4>
+            <p>2020-2020</p>
+            <p>Internet de las Cosas</p>
+          </div>
+          <div className="studies__list">
+            <img src="./img/uraccan.png" alt="" />
+            <h4>Universidad URACCAN</h4>
+            <p>2012-2016</p>
+            <p>Licenciatura en Informática Administrativa</p>
           </div>
         </div>
       </article>
