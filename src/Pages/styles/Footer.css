@@ -1,0 +1,13 @@
+.footer {
+  padding: 30px;
+}
+
+.footer h3 {
+  background-color: var(--primary);
+  text-align: center;
+  font-size: 22px;
+}
+
+.footer span {
+  color: var(--tertiary);
+}

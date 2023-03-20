@@ -2,6 +2,7 @@ import React from "react";
 import About from "./About";
 import Contact from "./Contact";
 import Feactured from "./Feactured";
+import Footer from "./Footer";
 import "./styles/Home.css";
 
 const Home = () => {
@@ -37,7 +38,7 @@ const Home = () => {
           <p className="header__home-description">
             Amante de su profesión y especializado en el desarrollo web Fron-end
             con estilos frescos y únicos. Actualmente me encuentro mejorando mis
-            hablidades en Noje js para ampliar y mejorar mis halilidades.
+            hablidades en Noje js.
           </p>
         </div>
       </header>
@@ -45,6 +46,7 @@ const Home = () => {
       <About />
       <Feactured />
       <Contact />
+      <Footer />
     </>
   );
 };

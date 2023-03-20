@@ -1,6 +1,7 @@
 .about {
   padding-top: 64px;
   height: 100%;
+  margin-top: 40px;
 }
 
 .about-me {
@@ -94,8 +95,8 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  column-gap: 64px;
   margin-bottom: 32px;
+  gap: 10px;
 }
 
 /* studies */
@@ -141,16 +142,16 @@
 }
 
 .studies__list img {
-  width: 70px;
+  width: 60px;
 }
 
 .studies__list p {
-  font-size: 20px;
-  padding: 10px;
+  font-size: 18px;
+  padding: 9px;
 }
 
 .studies__list h4 {
-  font-size: 20px;
+  font-size: 19px;
   margin-bottom: 8px;
   margin-top: 8px;
 }
