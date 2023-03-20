@@ -26,6 +26,12 @@
   padding: 16px;
   border: 2px solid var(--tertiary);
   width: 100%;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.feactured__portaffolio-card:hover {
+  transform: scale(1.05, 1.05);
 }
 
 .feactured__portafolio-header i {
