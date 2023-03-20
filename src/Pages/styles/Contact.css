@@ -43,3 +43,13 @@
   display: flex;
   justify-content: center;
 }
+
+/* formulario */
+
+.formulario {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 32px;
+  border: 1px solid red;
+}

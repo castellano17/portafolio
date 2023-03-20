@@ -27,6 +27,14 @@ const Home = () => {
             <a href="https://github.com/castellano17" target="_blank">
               <img src="/github-logo-240.png" alt="Github Repository" />
             </a>
+
+            <a
+              href="https://wa.me/50586151276?text=Hola,%20estoy%20interesado%20en%20tus%20servicios"
+              target="_blank"
+              className="whatsapp-button"
+            >
+              <i className="bx bxl-whatsapp"></i>
+            </a>
           </div>
         </div>
 
