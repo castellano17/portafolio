@@ -33,7 +33,7 @@ const Feactured = () => {
                   target="_blank"
                   className="feactured__glass-contenido"
                 >
-                  <i className="feactured-icon bx bxl-netlify"></i>
+                  <i className="feactured-icon bx bx-git-branch"></i>
                 </a>
               </div>
             </div>
