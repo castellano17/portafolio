@@ -27,22 +27,28 @@
   align-items: center;
   justify-content: center;
 }
+.contenedor:hover .glass {
+  opacity: 1;
+}
 
 .glass {
   display: flex;
   flex-direction: column;
   gap: 5px;
   border-radius: 4px;
-  height: 170px;
+  height: 290px;
   width: 250px;
-  margin-top: 130px;
+  margin-top: 10px;
   position: absolute;
   background-color: rgba(93, 233, 255, 0.692);
   backdrop-filter: blur(1px);
 
   text-align: center;
-  transition: 1.5s all;
+  transition: 0.8s all;
   overflow: hidden;
+
+  opacity: 0;
+  /* transition: opacity 0.5s ease-in-out; */
 }
 
 .feactured__glass-title {
@@ -99,7 +105,7 @@
   width: 250px;
   margin-top: 0;
   background-color: rgba(32, 72, 78, 0.548);
-  transition: 1.5s all;
+  transition: 0.8s all;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
@@ -121,9 +127,9 @@
 }
 
 .imagen img:hover {
-  margin-left: 35px;
+  /* margin-left: 35px;
   z-index: 1;
-  transition: 1.5s all;
+  transition: 1.5s all; */
 }
 
 .imagen img {
