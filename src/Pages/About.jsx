@@ -26,16 +26,34 @@ const About = () => {
             <i className="arrow-about bx bxs-right-arrow"></i> HTML5
           </p>
           <p>
-            <i className="arrow-about bx bxs-right-arrow"></i> CSS3
+            <i className="arrow-about bx bxs-right-arrow"></i> CSS
           </p>
           <p>
-            <i className="arrow-about bx bxs-right-arrow"></i> TailWind CSS
+            <i className="arrow-about bx bxs-right-arrow"></i> Tailwind CSS
           </p>
           <p>
             <i className="arrow-about bx bxs-right-arrow"></i> JavaScript
           </p>
           <p>
             <i className="arrow-about bx bxs-right-arrow"></i> React
+          </p>
+          <p>
+            <i className="arrow-about bx bxs-right-arrow"></i> Nodejs
+          </p>
+          <p>
+            <i className="arrow-about bx bxs-right-arrow"></i> PostgreSQL
+          </p>
+          <p>
+            <i className="arrow-about bx bxs-right-arrow"></i> GitHub
+          </p>
+          <p>
+            <i className="arrow-about bx bxs-right-arrow"></i> Redux
+          </p>
+          <p>
+            <i className="arrow-about bx bxs-right-arrow"></i> MongoDD
+          </p>
+          <p>
+            <i className="arrow-about bx bxs-right-arrow"></i> Axios
           </p>
         </section>
         <div className="about__button">
