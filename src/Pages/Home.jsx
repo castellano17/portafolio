@@ -41,12 +41,13 @@ const Home = () => {
         <div className="header__home-right">
           <p className="header__intro">Hola!, soy un</p>
           <h2 className="header__title">
-            Desarrollador web Front-end de Nicaragua
+            Desarrollador web Full-stack de Nicaragua
           </h2>
           <p className="header__home-description">
             Amante de su profesión y especializado en el desarrollo web Fron-end
-            con estilos frescos y únicos. Actualmente me encuentro mejorando mis
-            hablidades en Noje js.
+            y Back-end con estilos frescos y únicos. Actualmente me encuentro
+            mejorando mis hablidades en Python para ampliar y mejorar mis
+            habilidades.
           </p>
         </div>
       </header>

@@ -1,5 +1,16 @@
 export const proyectos = [
   {
+    titulo: "Citas veterinaria",
+    descripcion:
+      "Aplicación donde puedes realizar seguimiento de citas a los pacientes de una veterinaria, editarlos y eliminarlos",
+    tecnologias:
+      "React js, JavaScript, Tailwindcss, useEffect useState, localStorage",
+    enlaceGitHub: "https://github.com/castellano17/citas-veterinaria",
+    enlaceNetlify: "https://citas-veterinaria-esmir.netlify.app/",
+    img: "/img/citas-veterinaria.png",
+  },
+
+  {
     titulo: "Aplicación del clima",
     descripcion:
       "Aplicación donde puedes ver el clima de tu localización y consultar el clima de otra ciudad",
