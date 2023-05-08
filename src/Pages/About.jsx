@@ -50,7 +50,7 @@ const About = () => {
             <i className="arrow-about bx bxs-right-arrow"></i> Redux
           </p>
           <p>
-            <i className="arrow-about bx bxs-right-arrow"></i> MongoDb
+            <i className="arrow-about bx bxs-right-arrow"></i> MongoDB
           </p>
           <p>
             <i className="arrow-about bx bxs-right-arrow"></i> Axios
