@@ -5,11 +5,23 @@ import About from "./Pages/About";
 import Home from "./Pages/Home";
 import Contact from "./Pages/Contact";
 import Feactured from "./Pages/Feactured";
+import useLocalStorage from "use-local-storage";
+import { useEffect } from "react";
 
 function App() {
+  const [theme, setTheme] = useLocalStorage("theme", "dark");
+
+  const switchTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+  };
+  useEffect(() => {
+    document.body.dataset.theme = theme;
+  }, [theme]);
+
   return (
-    <div className="App">
-      <Navbar />
+    <div className="App" data-theme={theme}>
+      <Navbar switchTheme={switchTheme} />
       <div>
         {/* <Link to="/">Home</Link>
         <Link to="/about">About</Link>

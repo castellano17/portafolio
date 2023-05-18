@@ -50,6 +50,26 @@
   transform: scale(1.1, 1.1);
 }
 
+.theme-toggle {
+  font-size: 32px;
+  cursor: pointer;
+  display: inline-block;
+}
+.theme-toggle2 {
+  display: none;
+}
+
+.text-toggle {
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  display: block;
+}
+
+.text-toggle2 {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .navbar {
     display: flex;
@@ -106,5 +126,25 @@
   }
   .navbar__close:hover {
     color: var(--tertiary);
+  }
+
+  .theme-toggle2 {
+    font-size: 32px;
+    cursor: pointer;
+    display: inline-block;
+  }
+  .theme-toggle {
+    display: none;
+  }
+
+  .text-toggle {
+    display: none;
+  }
+
+  .text-toggle2 {
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    display: block;
   }
 }

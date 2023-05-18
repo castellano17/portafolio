@@ -2,16 +2,14 @@ import React, { useState } from "react";
 import { Link as RouterLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import "./styles/Navbar.css";
+import useLocalStorage from "use-local-storage";
 
-const Navbar = () => {
+const Navbar = ({ switchTheme }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [theme] = useLocalStorage("theme", "dark");
 
   const handleMenuOpen = () => {
-    if (menuOpen) {
-      setMenuOpen(false);
-    } else {
-      setMenuOpen(true);
-    }
+    setMenuOpen(!menuOpen);
   };
 
   const handleCloseMenu = () => {
@@ -82,6 +80,13 @@ const Navbar = () => {
           </div>
         </div>
 
+        <div>
+          <i
+            onClick={switchTheme}
+            className="theme-toggle bx bx-toggle-right"
+          ></i>
+          <h3 className="text-toggle">{theme}</h3>
+        </div>
         {/* botón del menú hamburguesa*/}
         <div
           className="navbar__menu-hamburguesa-buttom"
@@ -109,6 +114,14 @@ const Navbar = () => {
             <div className="" onClick={handleCloseMenu}>
               <RouterLink to="/contact">Contacto</RouterLink>
             </div>
+          </div>
+
+          <div>
+            <i
+              onClick={switchTheme}
+              className="theme-toggle2 bx bx-toggle-right"
+            ></i>
+            <h3 className="text-toggle2">{theme}</h3>
           </div>
         </div>
       </nav>
