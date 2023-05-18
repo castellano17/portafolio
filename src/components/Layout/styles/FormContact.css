@@ -1,7 +1,7 @@
 .contact-form-container {
   width: 400px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 10px;
   background-color: var(--secondary);
   border-radius: 8px;
 }
@@ -81,8 +81,8 @@
 @media (max-width: 480px) {
   .contact-form-container {
     width: 100%;
-    padding: 15px;
-    margin-bottom: 30px;
+    padding: 10px;
+    margin-bottom: 20px;
   }
 
   .title {

@@ -6,7 +6,7 @@ const FormContact = () => {
 
   return (
     <div className="contact-form-container">
-      <h2 className="title">Escribeme</h2>
+      <h2 className="title">Escríbeme</h2>
 
       {!formSubmitted ? (
         <form
@@ -59,11 +59,11 @@ const FormContact = () => {
           >
             Enviar
           </button>
-        //  <input
-          //  type="hidden"
-            //name="_next"
-            //value="https://www.esmirroque.com"
-          ///>
+          {/* <input
+            type="hidden"
+            name="_next"
+          value="https://www.esmirroque.com"
+          /> */}
           <input type="hidden" name="_captcha" value="false"></input>
         </form>
       ) : (
