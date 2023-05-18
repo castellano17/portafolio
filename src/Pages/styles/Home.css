@@ -2,19 +2,19 @@
   position: relative;
   height: 625px;
   display: flex;
-  gap: 16px;
+  gap: 10px;
   justify-content: center;
   align-items: center;
   max-width: 900px;
   margin: 0 auto;
 }
-
+/* 
 .header__home-left {
   background-image: url(../img/esmir_profile.png);
   background-size: auto 80%;
   background-position: bottom right;
   background-repeat: no-repeat;
-}
+} */
 
 .header__home-left,
 .header__home-right {
@@ -28,7 +28,7 @@
 
 .header__home-left h1 {
   display: block;
-  font-size: 70px;
+  font-size: 75px;
   font-family: monospace;
   white-space: nowrap;
   border-right: 4px solid var(--tertiary);

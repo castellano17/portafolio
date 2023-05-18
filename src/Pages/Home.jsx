@@ -45,7 +45,7 @@ const Home = () => {
             Amante de su profesión y especializado en el desarrollo web Fron-end
             y Back-end con estilos frescos y únicos. Actualmente me encuentro
             mejorando mis hablidades en Python para ampliar y mejorar mis
-            habilidades.
+            competencias.
           </p>
         </div>
       </header>
