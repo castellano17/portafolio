@@ -54,12 +54,14 @@
 .feactured__glass-title {
   font-size: 22px;
   margin-top: 15px;
+  color: white;
 }
 
 .feactured__glass-description {
   font-size: 17px;
   margin-left: 8px;
   margin-right: 8px;
+  color: white;
 }
 
 .feactured__glass-tecno {
@@ -68,6 +70,7 @@
   margin-left: 8px;
   margin-right: 8px;
   margin-bottom: 0;
+  color: white;
 }
 
 .glass:hover .feactured__glass-tecno {
