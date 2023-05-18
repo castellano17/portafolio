@@ -1,3 +1,4 @@
+import FormContact from "../components/Layout/FormContact";
 import "./styles/Contact.css";
 
 const Contact = () => {
@@ -21,6 +22,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <FormContact />
     </div>
   );
 };

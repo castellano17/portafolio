@@ -1,0 +1,100 @@
+.contact-form-container {
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--secondary);
+  border-radius: 8px;
+}
+
+.title {
+  color: var(--white);
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-label {
+  color: var(--white);
+  font-size: 18px;
+  display: block;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+.contact-input,
+.contact-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+  background-color: var(--white);
+  color: var(--primary);
+}
+
+.contact-form textarea {
+  height: 120px;
+}
+
+.button[type="submit"] {
+  padding: 10px 20px;
+  background-color: var(--tertiary);
+  color: var(--white);
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.button[type="submit"]:hover {
+  background-color: #0a568c;
+}
+
+.button[type="submit"] {
+  padding: 10px 20px;
+  background-color: var(--tertiary);
+  color: var(--white);
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button[type="submit"]:hover {
+  background-color: #0a568c;
+}
+
+.button[type="submit"]:focus {
+  outline: none;
+}
+
+.button[type="submit"]:disabled {
+  background-color: var(--primary);
+  cursor: not-allowed;
+}
+
+@media (max-width: 480px) {
+  .contact-form-container {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 30px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .contact-input {
+    font-size: 14px;
+  }
+
+  .button[type="submit"] {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+}
