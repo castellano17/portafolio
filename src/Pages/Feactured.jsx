@@ -1,15 +1,14 @@
 import React from "react";
 import "./styles/Feactured.css";
-import { proyectos } from "../util/FrontEnd";
 
-const Feactured = () => {
+const Feactured = ({ translations, frontEndTranslations }) => {
   return (
     <div id="feactured" className="feactured">
-      <h3>Proyectos</h3>
+      <h3>{translations.project.title}</h3>
 
       <div className="feactured__container-card">
-        {proyectos.map((proyecto, index) => (
-          <div key={index} className="contenedor">
+        {frontEndTranslations.map((proyecto) => (
+          <div key={proyecto.id} className="contenedor">
             <div className="glass">
               <h2 className="feactured__glass-title">
                 <b>{proyecto.titulo}</b>

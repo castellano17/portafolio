@@ -1,12 +1,12 @@
 import { useState } from "react";
 import "./styles/FormContact.css";
 
-const FormContact = () => {
+const FormContact = ({ translations }) => {
   const [formSubmitted, setFormSubmitted] = useState(false);
 
   return (
     <div className="contact-form-container">
-      <h2 className="title">Escríbeme</h2>
+      <h2 className="title">{translations.contact.form.title}</h2>
 
       {!formSubmitted ? (
         <form
@@ -16,7 +16,7 @@ const FormContact = () => {
         >
           <div className="form-group">
             <label className="contact-label" htmlFor="name">
-              Nombre:
+              {translations.contact.form.name}
             </label>
             <input
               className="contact-input"
@@ -28,7 +28,7 @@ const FormContact = () => {
           </div>
           <div className="form-group">
             <label className="contact-label" htmlFor="email">
-              Email:
+              {translations.contact.form.email}
             </label>
             <input
               className="contact-input"
@@ -40,7 +40,7 @@ const FormContact = () => {
           </div>
           <div className="form-group">
             <label className="contact-label" htmlFor="message">
-              Mensaje:
+              {translations.contact.form.message}
             </label>
             <textarea
               className="contact-input"
@@ -57,7 +57,7 @@ const FormContact = () => {
               setFormSubmitted(true);
             }}
           >
-            Enviar
+            {translations.contact.form.button}
           </button>
           {/* <input
             type="hidden"

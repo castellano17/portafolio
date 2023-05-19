@@ -1,10 +1,10 @@
 import FormContact from "../components/Layout/FormContact";
 import "./styles/Contact.css";
 
-const Contact = () => {
+const Contact = ({ translations }) => {
   return (
     <div id="contact" className="contact shadowBg">
-      <h3>Contacto</h3>
+      <h3>{translations.contact.title}</h3>
       <div className="contact__container">
         <div className="contact__container-component">
           <div className="contact__img">
@@ -22,7 +22,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <FormContact />
+      <FormContact translations={translations} />
     </div>
   );
 };

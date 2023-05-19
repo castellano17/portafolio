@@ -1,25 +1,18 @@
 import React from "react";
 import "./styles/About.css";
 
-const About = () => {
+const About = ({ translations, studiesTranslations }) => {
   return (
     <div id="about" className="about shadowBg">
       <article className="about-me">
         <h3>
-          Sobre <span>mi</span>
+          {translations.aboutMe.titleOne}
+          <span> {translations.aboutMe.titleTwo}</span>
         </h3>
         <p>
-          Como un apasionado de la lectura, me atraen los desafíos y disfruto de
-          la competencia sana en todas mis actividades. Creo firmemente que la
-          búsqueda constante de la mejora en múltiples aspectos es clave para el
-          éxito. <br />
+          {translations.aboutMe.paragraphOne} <br />
           <br />
-          Tengo una actitud optimista y disfruto motivando a los demás y
-          motivándome a mí mismo. Siempre intento encontrar el lado positivo de
-          cualquier adversidad para evitar frustraciones innecesarias. Me
-          encuentro actualmente en busca de nuevas oportunidades, estas son
-          algunas de las tecnologías que manejo y si gustas contactarme tienes
-          la sección de contacto para hacerlo.
+          {translations.aboutMe.paragraphTwo}
         </p>
         <section className="container-skills">
           <p>
@@ -59,53 +52,25 @@ const About = () => {
         <div className="about__button">
           <a href="/EsmirRoque.pdf " target="_blank">
             <img src="./img/descargacv.png" alt="descargar cv" />
-            <p>Download CV</p>
+            <p>{translations.aboutMe.cv}</p>
           </a>
         </div>
       </article>
 
       <article className="studies">
         <h3>
-          Mis <span>estudios</span>
+          {translations.aboutMe.studes.one}{" "}
+          <span> {translations.aboutMe.studes.two}</span>
         </h3>
         <div className="studies__container">
-          <div className="studies__list">
-            <img src="./img/platzi.webp" alt="" />
-            <h4>Platzi</h4>
-            <p>2023-2023</p>
-            <p>Curso de Programación Básica</p>
-          </div>
-
-          <div className="studies__list">
-            <img src="./img/logo_academlo.png" alt="" />
-            <h4>Academlo</h4>
-            <p>2022-2023</p>
-            <p>Fundamentos de desarrollo web</p>
-          </div>
-          <div className="studies__list">
-            <img src="./img/logo_academlo.png" alt="" />
-            <h4>Academlo</h4>
-            <p>2023-2023</p>
-            <p>Desarrollo de aplicaciones web con React</p>
-          </div>
-          <div className="studies__list">
-            <img src="./img/Microsoft-logo.jpg" alt="" />
-            <h4>Microsoft</h4>
-            <p>2020-2020</p>
-            <p>Certificación Internacional Data Analyst Associate</p>
-          </div>
-          <div className="studies__list">
-            <img src="./img/ceabad.jpg" alt="" />
-            <h4>CEABAD</h4>
-            <p>2020-2020</p>
-            <p>Internet de las Cosas</p>
-          </div>
-          <div className="studies__list">
-            <img src="./img/uraccan.png" alt="" />
-            <h4>Universidad URACCAN</h4>
-            <p>2012-2016</p>
-            <p>Licenciatura en Informática Administrativa</p>
-          </div>
+          {studiesTranslations.map((studie) => (
+            <div key={studie.id} className="studies__list">
+              <img src={studie.img} alt="" />
+              <h4>{studie.institution}</h4>
+              <p>{studie.date}</p>
+              <p>{studie.description}</p>
+            </div>
+          ))}
         </div>
       </article>
     </div>

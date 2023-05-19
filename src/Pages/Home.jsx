@@ -5,7 +5,7 @@ import Feactured from "./Feactured";
 import Footer from "./Footer";
 import "./styles/Home.css";
 
-const Home = ({ translations }) => {
+const Home = ({ translations, studiesTranslations, frontEndTranslations }) => {
   return (
     <>
       <header id="home" className="header__home">
@@ -45,10 +45,16 @@ const Home = ({ translations }) => {
         </div>
       </header>
 
-      <About />
-      <Feactured />
-      <Contact />
-      <Footer />
+      <About
+        translations={translations}
+        studiesTranslations={studiesTranslations}
+      />
+      <Feactured
+        translations={translations}
+        frontEndTranslations={frontEndTranslations}
+      />
+      <Contact translations={translations} />
+      <Footer translations={translations} />
     </>
   );
 };

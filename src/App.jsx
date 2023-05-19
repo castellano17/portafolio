@@ -7,8 +7,10 @@ import Contact from "./Pages/Contact";
 import Feactured from "./Pages/Feactured";
 import useLocalStorage from "use-local-storage";
 import { useEffect, useState } from "react";
-import { en as enTranslations } from "./translations/en.js";
-import { es as esTranslations } from "./translations/es.js";
+import { en } from "./translations/en.js";
+import { es } from "./translations/es.js";
+import { studiesEN, studiesEs } from "./util/studies";
+import { proyectosES, proyectosEn } from "./util/FrontEnd";
 
 function App() {
   const [theme, setTheme] = useLocalStorage("theme", "dark");
@@ -27,7 +29,10 @@ function App() {
     }
   };
 
-  const translations = language === "es" ? esTranslations : enTranslations; // Obtiene las traducciones según el idioma actual
+  const translations = language === "es" ? es : en; // Obtiene las traducciones según el idioma actual
+  const studiesTranslations = language === "es" ? studiesEs : studiesEN; // Obtiene las traducciones de "studies" según el idioma actual
+  const frontEndTranslations = language === "es" ? proyectosES : proyectosEn; // Obtienes las traducciones de "FrontEnd" según el idioma actual
+
   useEffect(() => {
     document.body.dataset.theme = theme;
   }, [theme]);
@@ -47,7 +52,16 @@ function App() {
         <Link to="/contact">Contact</Link> */}
       </div>
       <Routes>
-        <Route path="/" element={<Home translations={translations} />} />
+        <Route
+          path="/"
+          element={
+            <Home
+              translations={translations}
+              studiesTranslations={studiesTranslations}
+              frontEndTranslations={frontEndTranslations}
+            />
+          }
+        />
         <Route path="/about" element={<About />} />
         <Route path="/feactured" element={<Feactured />} />
         <Route path="/contact" element={<Contact />} />
