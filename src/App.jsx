@@ -62,9 +62,28 @@ function App() {
             />
           }
         />
-        <Route path="/about" element={<About />} />
-        <Route path="/feactured" element={<Feactured />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route
+          path="/about"
+          element={
+            <About
+              translations={translations}
+              studiesTranslations={studiesTranslations}
+            />
+          }
+        />
+        <Route
+          path="/feactured"
+          element={
+            <Feactured
+              translations={translations}
+              frontEndTranslations={frontEndTranslations}
+            />
+          }
+        />
+        <Route
+          path="/contact"
+          element={<Contact translations={translations} />}
+        />
       </Routes>
     </div>
   );
