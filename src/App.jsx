@@ -47,7 +47,7 @@ function App() {
         <Link to="/contact">Contact</Link> */}
       </div>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home translations={translations} />} />
         <Route path="/about" element={<About />} />
         <Route path="/feactured" element={<Feactured />} />
         <Route path="/contact" element={<Contact />} />

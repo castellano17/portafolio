@@ -5,7 +5,7 @@ import Feactured from "./Feactured";
 import Footer from "./Footer";
 import "./styles/Home.css";
 
-const Home = () => {
+const Home = ({ translations }) => {
   return (
     <>
       <header id="home" className="header__home">
@@ -39,14 +39,9 @@ const Home = () => {
         </div>
 
         <div className="header__home-right">
-          <p className="header__intro">Hola!, soy un</p>
-          <h2 className="header__title">Desarrollador web Full-stack</h2>
-          <p className="header__home-description">
-            Amante de su profesión y especializado en el desarrollo web Fron-end
-            y Back-end con estilos frescos y únicos. Actualmente me encuentro
-            mejorando mis hablidades en Python para ampliar y mejorar mis
-            competencias.
-          </p>
+          <p className="header__intro">{translations.home.greeting}</p>
+          <h2 className="header__title">{translations.home.profession}</h2>
+          <p className="header__home-description">{translations.home.Iam}</p>
         </div>
       </header>
 

@@ -23,7 +23,9 @@ const Navbar = ({
 
   // Obtener el texto del tema traducido según el idioma actual
   const themeText =
-    language === "es" ? translations.themes[theme] : translations.themes[theme];
+    language === "es"
+      ? translations.navbar.themes[theme]
+      : translations.navbar.themes[theme];
 
   return (
     <div className="navbar__container ">
@@ -48,7 +50,7 @@ const Navbar = ({
               duration={500}
               className="scroll-link"
             >
-              {translations.menuOne}
+              {translations.navbar.menuOne}
             </ScrollLink>
           </div>
           <div className="navbar__link-horizontal">
@@ -60,7 +62,7 @@ const Navbar = ({
               duration={500}
               className="scroll-link"
             >
-              {translations.menuTwo}
+              {translations.navbar.menuTwo}
             </ScrollLink>
           </div>
           <div className="navbar__link-horizontal">
@@ -72,7 +74,7 @@ const Navbar = ({
               duration={500}
               className="scroll-link"
             >
-              {translations.menuThree}
+              {translations.navbar.menuThree}
             </ScrollLink>
           </div>
           <div className="navbar__link-horizontal">
@@ -84,7 +86,7 @@ const Navbar = ({
               duration={500}
               className="scroll-link"
             >
-              {translations.menuFour}
+              {translations.navbar.menuFour}
             </ScrollLink>
           </div>
         </div>
@@ -123,16 +125,20 @@ const Navbar = ({
               <i className="bx bx-x"></i>
             </button>
             <div onClick={handleCloseMenu}>
-              <RouterLink to="/">{translations.menuOne}</RouterLink>
+              <RouterLink to="/">{translations.navbar.menuOne}</RouterLink>
             </div>
             <div className="" onClick={handleCloseMenu}>
-              <RouterLink to="/about">{translations.menuTwo}</RouterLink>
+              <RouterLink to="/about">{translations.navbar.menuTwo}</RouterLink>
             </div>
             <div className="" onClick={handleCloseMenu}>
-              <RouterLink to="/feactured">{translations.menuThree}</RouterLink>
+              <RouterLink to="/feactured">
+                {translations.navbar.menuThree}
+              </RouterLink>
             </div>
             <div className="" onClick={handleCloseMenu}>
-              <RouterLink to="/contact">{translations.menuFour}</RouterLink>
+              <RouterLink to="/contact">
+                {translations.navbar.menuFour}
+              </RouterLink>
             </div>
           </div>
 
