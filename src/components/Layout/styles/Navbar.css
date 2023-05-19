@@ -59,6 +59,20 @@
   display: none;
 }
 
+.translate-icon2 {
+  display: none;
+}
+
+.translate-icon {
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.1s ease all;
+}
+
+.translate-icon:hover {
+  transform: scale(1.1, 1.1);
+}
+
 .text-toggle {
   font-size: 14px;
   text-align: center;
@@ -146,5 +160,21 @@
     text-align: center;
     text-transform: uppercase;
     display: block;
+    margin-bottom: 12px;
+  }
+
+  .translate-icon {
+    display: none;
+  }
+
+  .translate-icon2 {
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.1s ease all;
+    display: block;
+  }
+
+  .translate-icon2:hover {
+    transform: scale(1.1, 1.1);
   }
 }

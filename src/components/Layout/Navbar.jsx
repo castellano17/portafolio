@@ -4,7 +4,12 @@ import { Link as ScrollLink } from "react-scroll";
 import "./styles/Navbar.css";
 import useLocalStorage from "use-local-storage";
 
-const Navbar = ({ switchTheme }) => {
+const Navbar = ({
+  switchTheme,
+  handleLanguageToggle,
+  translations,
+  language,
+}) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [theme] = useLocalStorage("theme", "dark");
 
@@ -15,6 +20,10 @@ const Navbar = ({ switchTheme }) => {
   const handleCloseMenu = () => {
     setMenuOpen(false);
   };
+
+  // Obtener el texto del tema traducido según el idioma actual
+  const themeText =
+    language === "es" ? translations.themes[theme] : translations.themes[theme];
 
   return (
     <div className="navbar__container ">
@@ -39,7 +48,7 @@ const Navbar = ({ switchTheme }) => {
               duration={500}
               className="scroll-link"
             >
-              Inicio
+              {translations.menuOne}
             </ScrollLink>
           </div>
           <div className="navbar__link-horizontal">
@@ -51,7 +60,7 @@ const Navbar = ({ switchTheme }) => {
               duration={500}
               className="scroll-link"
             >
-              Sobre mi
+              {translations.menuTwo}
             </ScrollLink>
           </div>
           <div className="navbar__link-horizontal">
@@ -63,7 +72,7 @@ const Navbar = ({ switchTheme }) => {
               duration={500}
               className="scroll-link"
             >
-              Proyectos
+              {translations.menuThree}
             </ScrollLink>
           </div>
           <div className="navbar__link-horizontal">
@@ -75,7 +84,7 @@ const Navbar = ({ switchTheme }) => {
               duration={500}
               className="scroll-link"
             >
-              Contacto
+              {translations.menuFour}
             </ScrollLink>
           </div>
         </div>
@@ -85,8 +94,19 @@ const Navbar = ({ switchTheme }) => {
             onClick={switchTheme}
             className="theme-toggle bx bx-toggle-right"
           ></i>
-          <h3 className="text-toggle">{theme}</h3>
+          <h3 className="text-toggle">{themeText}</h3>
         </div>
+
+        {/* Agregar el botón de traducción */}
+        <div
+          onClick={handleLanguageToggle}
+          className="translate-icon"
+          title={language === "es" ? "Traducir" : "Translate"}
+        >
+          <i className="bx bx-globe"></i>
+          {language === "es" ? " ES" : " EN"}
+        </div>
+
         {/* botón del menú hamburguesa*/}
         <div
           className="navbar__menu-hamburguesa-buttom"
@@ -103,16 +123,16 @@ const Navbar = ({ switchTheme }) => {
               <i className="bx bx-x"></i>
             </button>
             <div onClick={handleCloseMenu}>
-              <RouterLink to="/">Inicio</RouterLink>
+              <RouterLink to="/">{translations.menuOne}</RouterLink>
             </div>
             <div className="" onClick={handleCloseMenu}>
-              <RouterLink to="/about">Sobre mi</RouterLink>
+              <RouterLink to="/about">{translations.menuTwo}</RouterLink>
             </div>
             <div className="" onClick={handleCloseMenu}>
-              <RouterLink to="/feactured">Proyectos</RouterLink>
+              <RouterLink to="/feactured">{translations.menuThree}</RouterLink>
             </div>
             <div className="" onClick={handleCloseMenu}>
-              <RouterLink to="/contact">Contacto</RouterLink>
+              <RouterLink to="/contact">{translations.menuFour}</RouterLink>
             </div>
           </div>
 
@@ -121,7 +141,17 @@ const Navbar = ({ switchTheme }) => {
               onClick={switchTheme}
               className="theme-toggle2 bx bx-toggle-right"
             ></i>
-            <h3 className="text-toggle2">{theme}</h3>
+            <h3 className="text-toggle2">{themeText}</h3>
+          </div>
+
+          {/* Agregar el botón de traducción */}
+          <div
+            onClick={handleLanguageToggle}
+            className="translate-icon2"
+            title={language === "es" ? "Traducir" : "Translate"}
+          >
+            <i className="bx bx-globe"></i>
+            {language === "es" ? " ES" : " EN"}
           </div>
         </div>
       </nav>
