@@ -1,41 +1,48 @@
 export const studiesEs = [
-  {
+   {
     id: 1,
+    institution: "ACADEMLO",
+    date: "2023-2023",
+    description: "Desarrollador Back-End con Node.js",
+    img: "./img/logo_academlo.png",
+  },
+  {
+    id: 2,
     institution: "Platzi",
     date: "2023-2023",
     description: "Curso de Programación Básica",
     img: "./img/platzi.webp",
   },
   {
-    id: 2,
+    id: 3,
     institution: "Academlo",
     date: "2022-2023",
     description: "Fundamentos de desarrollo web",
     img: "./img/logo_academlo.png",
   },
   {
-    id: 3,
+    id: 4,
     institution: "Academlo",
     date: "2023-2023",
     description: "Desarrollo de aplicaciones web con React",
     img: "./img/logo_academlo.png",
   },
   {
-    id: 4,
+    id: 5,
     institution: "Microsoft",
     date: "2020-2020",
     description: "Certificación Internacional de Analista de Datos Asociado",
     img: "./img/Microsoft-logo.jpg",
   },
   {
-    id: 5,
+    id: 6,
     institution: "CEABAD",
     date: "2020-2020",
     description: "Internet de las Cosas",
     img: "./img/ceabad.jpg",
   },
   {
-    id: 6,
+    id: 7,
     institution: "Universidad URACCAN",
     date: "2012-2016",
     description: "Licenciatura en Informática Administrativa",
@@ -44,43 +51,50 @@ export const studiesEs = [
 ];
 
 export const studiesEN = [
-  {
+   {
     id: 1,
+    institution: "ACADEMLO",
+    date: "2023-2023",
+    description: "Back-End Development with Node.js",
+    img: "./img/logo_academlo.png",
+  },
+  {
+    id: 2,
     institution: "Platzi",
     date: "2023-2023",
     description: "Basic Programming Course",
     img: "./img/platzi.webp",
   },
   {
-    id: 2,
+    id: 3,
     institution: "Academlo",
     date: "2022-2023",
     description: "Fundamentals of web development",
     img: "./img/logo_academlo.png",
   },
   {
-    id: 3,
+    id: 4,
     institution: "Academlo",
     date: "2023-2023",
     description: "Web application development with React",
     img: "./img/logo_academlo.png",
   },
   {
-    id: 4,
+    id: 5,
     institution: "Microsoft",
     date: "2020-2020",
     description: "International Certification Data Analyst Associate",
     img: "./img/Microsoft-logo.jpg",
   },
   {
-    id: 5,
+    id: 6,
     institution: "CEABAD",
     date: "2020-2020",
     description: "Internet of Things (IoT)",
     img: "./img/ceabad.jpg",
   },
   {
-    id: 6,
+    id: 7,
     institution: " URACCAN University",
     date: "2012-2016",
     description: "Bachelor's Degree in Administrative Informatics",
