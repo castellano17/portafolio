@@ -22,6 +22,7 @@ const FormContact = ({ translations }) => {
               className="contact-input"
               type="text"
               name="name"
+              requerid=true
               //value={formData.name}
               //   onChange={handleChange}
             />
@@ -34,6 +35,7 @@ const FormContact = ({ translations }) => {
               className="contact-input"
               type="email"
               name="email"
+       requerid=true
               //  value={formData.email}
               //   onChange={handleChange}
             />
@@ -45,6 +47,7 @@ const FormContact = ({ translations }) => {
             <textarea
               className="contact-input"
               name="message"
+       requerid=true
               //  value={formData.message}
               // onChange={handleChange}
             ></textarea>
