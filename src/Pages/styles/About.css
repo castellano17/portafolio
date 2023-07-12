@@ -98,7 +98,7 @@
   gap: 10px;
 }
 .container-skills__name {
-  color: white;
+  color: var(--white);
 }
 
 /* studies */
