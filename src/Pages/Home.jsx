@@ -5,7 +5,12 @@ import Feactured from "./Feactured";
 import Footer from "./Footer";
 import "./styles/Home.css";
 
-const Home = ({ translations, studiesTranslations, frontEndTranslations }) => {
+const Home = ({
+  translations,
+  studiesTranslations,
+  frontEndTranslations,
+  language,
+}) => {
   return (
     <>
       <header id="home" className="header__home">
@@ -48,6 +53,7 @@ const Home = ({ translations, studiesTranslations, frontEndTranslations }) => {
       <About
         translations={translations}
         studiesTranslations={studiesTranslations}
+        language={language}
       />
       <Feactured
         translations={translations}

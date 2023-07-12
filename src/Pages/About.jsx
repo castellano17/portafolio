@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles/About.css";
 
-const About = ({ translations, studiesTranslations }) => {
+const About = ({ translations, studiesTranslations, language }) => {
   return (
     <div id="about" className="about shadowBg">
       <article className="about-me">
@@ -50,7 +50,13 @@ const About = ({ translations, studiesTranslations }) => {
           </p>
         </section>
         <div className="about__button">
-          <a href="/EsmirRoque.pdf " target="_blank">
+          <a
+            href={
+              language === "es" ? "/EsmirRoque_es.pdf" : "/EsmirRoque_en.pdf"
+            }
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src="./img/descargacv.png" alt="descargar cv" />
             <p>{translations.aboutMe.cv}</p>
           </a>
@@ -67,8 +73,13 @@ const About = ({ translations, studiesTranslations }) => {
             <div key={studie.id} className="studies__list">
               <img src={studie.img} alt="" />
               <h4>{studie.institution}</h4>
-              <p>{studie.date}</p>
-              <p>{studie.description}</p>
+              <p className="studies__date">{studie.date}</p>
+              <p className="studies__description">{studie.description}</p>
+              <div className="studes__button">
+                <a href={studie.link} target="_blank">
+                  <img src="./img/descargacv.png" alt="descargar" />
+                </a>
+              </div>
             </div>
           ))}
         </div>

@@ -126,14 +126,16 @@
 }
 
 .studies__list {
-  text-align: center;
   width: 250px;
   height: 300px;
   background-color: var(--secondary);
-  padding: 40px 48px;
+  padding: 40px 20px;
   box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   border-radius: 4px;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
 }
 
 .studies__list:hover {
@@ -145,13 +147,35 @@
   width: 60px;
 }
 
-.studies__list p {
-  font-size: 18px;
-  padding: 9px;
+.studies__date {
+  font-size: 12px;
+  padding: 7px 0px;
+}
+
+.studies__description {
+  font-size: 17px;
+  padding: 7px 0px;
 }
 
 .studies__list h4 {
   font-size: 19px;
   margin-bottom: 8px;
   margin-top: 8px;
+}
+
+.studes__button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.studes__button a img {
+  width: 32px;
+  height: auto;
+  animation: 5s infinite flotar;
+  cursor: pointer;
+}
+.studes__button a img:hover {
+  width: 40px;
 }

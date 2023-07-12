@@ -59,6 +59,7 @@ function App() {
               translations={translations}
               studiesTranslations={studiesTranslations}
               frontEndTranslations={frontEndTranslations}
+              language={language}
             />
           }
         />
@@ -68,6 +69,7 @@ function App() {
             <About
               translations={translations}
               studiesTranslations={studiesTranslations}
+              language={language}
             />
           }
         />
