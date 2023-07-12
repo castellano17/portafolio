@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles/About.css";
+import { skills } from "../util/Skills";
 
 const About = ({ translations, studiesTranslations, language }) => {
   return (
@@ -15,39 +16,11 @@ const About = ({ translations, studiesTranslations, language }) => {
           {translations.aboutMe.paragraphTwo}
         </p>
         <section className="container-skills">
-          <p>
-            <i className="arrow-about bx bxs-right-arrow"></i> HTML5
-          </p>
-          <p>
-            <i className="arrow-about bx bxs-right-arrow"></i> CSS
-          </p>
-          <p>
-            <i className="arrow-about bx bxs-right-arrow"></i> Tailwind CSS
-          </p>
-          <p>
-            <i className="arrow-about bx bxs-right-arrow"></i> JavaScript
-          </p>
-          <p>
-            <i className="arrow-about bx bxs-right-arrow"></i> React
-          </p>
-          <p>
-            <i className="arrow-about bx bxs-right-arrow"></i> Nodejs
-          </p>
-          <p>
-            <i className="arrow-about bx bxs-right-arrow"></i> PostgreSQL
-          </p>
-          <p>
-            <i className="arrow-about bx bxs-right-arrow"></i> GitHub
-          </p>
-          <p>
-            <i className="arrow-about bx bxs-right-arrow"></i> Redux
-          </p>
-          <p>
-            <i className="arrow-about bx bxs-right-arrow"></i> MongoDB
-          </p>
-          <p>
-            <i className="arrow-about bx bxs-right-arrow"></i> Axios
-          </p>
+          {skills.map((skill) => (
+            <i className="arrow-about bx bxs-right-arrow" key={skill.id}>
+              <span className="container-skills__name"> {skill.name}</span>
+            </i>
+          ))}
         </section>
         <div className="about__button">
           <a

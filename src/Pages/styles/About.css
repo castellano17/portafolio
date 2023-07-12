@@ -90,13 +90,15 @@
 
 .container-skills {
   margin: 0 auto;
-  max-width: 500px;
   font-size: 22px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 32px;
   gap: 10px;
+}
+.container-skills__name {
+  color: white;
 }
 
 /* studies */
