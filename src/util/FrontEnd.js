@@ -8,8 +8,7 @@ export const proyectosES = [
       "React , Redux, axios, hook-form, redux, router-dom, consumo de API creada por mi, nodejs, sequielize, swagger, uuid, passport, jsonwebtoken ",
     enlaceGitHub:
       "https://docs.google.com/document/d/1LasmzHb4sSQidOyUDAPFiYFE1MUWLa1m0hhbNM3H2Aw/edit?usp=sharing",
-    enlaceNetlify:
-      "https://docs.google.com/document/d/1LasmzHb4sSQidOyUDAPFiYFE1MUWLa1m0hhbNM3H2Aw/edit?usp=sharing",
+    enlaceNetlify: "https://control-presupuesto-esmir.netlify.app/",
     img: "/img/control-presupuesto.png",
   },
   {
@@ -107,8 +106,7 @@ export const proyectosEn = [
       "React , Redux, axios, hook-form, redux, router-dom, consumo de API creada por mi, nodejs, sequielize, swagger, uuid, passport, jsonwebtoken ",
     enlaceGitHub:
       "https://docs.google.com/document/d/1LasmzHb4sSQidOyUDAPFiYFE1MUWLa1m0hhbNM3H2Aw/edit?usp=sharing",
-    enlaceNetlify:
-      "https://docs.google.com/document/d/1LasmzHb4sSQidOyUDAPFiYFE1MUWLa1m0hhbNM3H2Aw/edit?usp=sharing",
+    enlaceNetlify: "https://control-presupuesto-esmir.netlify.app/",
     img: "/img/control-presupuesto.png",
   },
   {
