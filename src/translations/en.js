@@ -50,5 +50,5 @@ export const en = {
   },
 
   //footer
-  footer: "Full-stack Developer",
+  footer: "Full-stack Web Developer",
 };
