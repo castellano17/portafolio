@@ -1,6 +1,19 @@
 export const proyectosES = [
   {
     id: 1,
+    titulo: "Planificador de Gastos",
+    descripcion:
+      "Puedes planificar tus gastos, filtrar por categorías, cuenta con un panel para visualizar el monto disponible y gastado. ",
+    tecnologias:
+      "React , Redux, axios, hook-form, redux, router-dom, consumo de API creada por mi, nodejs, sequielize, swagger, uuid, passport, jsonwebtoken ",
+    enlaceGitHub:
+      "https://docs.google.com/document/d/1LasmzHb4sSQidOyUDAPFiYFE1MUWLa1m0hhbNM3H2Aw/edit?usp=sharing",
+    enlaceNetlify:
+      "https://docs.google.com/document/d/1LasmzHb4sSQidOyUDAPFiYFE1MUWLa1m0hhbNM3H2Aw/edit?usp=sharing",
+    img: "/img/control-presupuesto.png",
+  },
+  {
+    id: 2,
     titulo: "Citas veterinaria",
     descripcion:
       "Aplicación donde puedes realizar seguimiento de citas a los pacientes de una veterinaria, editarlos y eliminarlos",
@@ -12,7 +25,7 @@ export const proyectosES = [
   },
 
   {
-    id: 2,
+    id: 3,
     titulo: "Aplicación del clima",
     descripcion:
       "Aplicación donde puedes ver el clima de tu localización y consultar el clima de otra ciudad",
@@ -22,7 +35,7 @@ export const proyectosES = [
     img: "/img/weather.png",
   },
   {
-    id: 3,
+    id: 4,
     titulo: "Rick and Morty Wiki",
     descripcion:
       "Pagina web donde puedes consultar personajes y ver caracteristicas dependiento de su dimensión.",
@@ -33,7 +46,7 @@ export const proyectosES = [
     img: "/img/RickandMorty.png",
   },
   {
-    id: 4,
+    id: 5,
     titulo: "Pokedex",
     descripcion:
       "Aplicación donde puedes consultar la información detallada de los pokemon y filtrar por nombres y categorías",
@@ -44,7 +57,7 @@ export const proyectosES = [
     img: "/img/pokedex.png",
   },
   {
-    id: 5,
+    id: 6,
     titulo: "E-Commerce",
     descripcion:
       " Tienda en línea, permite filtrar por categorías, agregar al carrito y visualizar detalles de cada producto",
@@ -55,7 +68,7 @@ export const proyectosES = [
     img: "/img/ecommerce.png",
   },
   {
-    id: 6,
+    id: 7,
     titulo: "Usuarios",
     descripcion: " Proyecto",
     tecnologias:
@@ -65,7 +78,7 @@ export const proyectosES = [
     img: "/img/usuarios.png",
   },
   {
-    id: 7,
+    id: 8,
     titulo: "Juego de memoria",
     descripcion: " Juego de memoria, desarrollado en React y Tailwind CSS",
     tecnologias: "React y Tailwind CSS",
@@ -74,7 +87,7 @@ export const proyectosES = [
     img: "/img/memorygame.png",
   },
   {
-    id: 8,
+    id: 9,
     titulo: "Citas aleatorias",
     descripcion: " app que muestra una cita de autores de forma aleatoria",
     tecnologias: "Componente, props, useState",
@@ -87,6 +100,19 @@ export const proyectosES = [
 export const proyectosEn = [
   {
     id: 1,
+    titulo: "Expense Planner",
+    descripcion:
+      "Application where you can plan your expenses, filter by categories, has a panel to visualize the available and spent amount.",
+    tecnologias:
+      "React , Redux, axios, hook-form, redux, router-dom, consumo de API creada por mi, nodejs, sequielize, swagger, uuid, passport, jsonwebtoken ",
+    enlaceGitHub:
+      "https://docs.google.com/document/d/1LasmzHb4sSQidOyUDAPFiYFE1MUWLa1m0hhbNM3H2Aw/edit?usp=sharing",
+    enlaceNetlify:
+      "https://docs.google.com/document/d/1LasmzHb4sSQidOyUDAPFiYFE1MUWLa1m0hhbNM3H2Aw/edit?usp=sharing",
+    img: "/img/control-presupuesto.png",
+  },
+  {
+    id: 2,
     titulo: "Veterinary appointments",
     descripcion:
       "Application where you can track appointments for veterinary patients, edit them, and delete them",
@@ -98,7 +124,7 @@ export const proyectosEn = [
   },
 
   {
-    id: 2,
+    id: 3,
     titulo: "Weather application",
     descripcion:
       "Application where you can view the weather of your location and check the weather of another city",
@@ -108,7 +134,7 @@ export const proyectosEn = [
     img: "/img/weather.png",
   },
   {
-    id: 3,
+    id: 4,
     titulo: "Rick and Morty Wiki",
     descripcion:
       "A website where you can look up characters and view their characteristics based on their dimension",
@@ -119,7 +145,7 @@ export const proyectosEn = [
     img: "/img/RickandMorty.png",
   },
   {
-    id: 4,
+    id: 5,
     titulo: "Pokedex",
     descripcion:
       "Application where you can check detailed information about Pokémon and filter by names and categories",
@@ -130,7 +156,7 @@ export const proyectosEn = [
     img: "/img/pokedex.png",
   },
   {
-    id: 5,
+    id: 6,
     titulo: "E-Commerce",
     descripcion:
       "Online store, allows filtering by categories, adding to cart, and viewing details of each product",
@@ -141,7 +167,7 @@ export const proyectosEn = [
     img: "/img/ecommerce.png",
   },
   {
-    id: 6,
+    id: 7,
     titulo: "Users",
     descripcion: " Proyect",
     tecnologias:
@@ -151,7 +177,7 @@ export const proyectosEn = [
     img: "/img/usuarios.png",
   },
   {
-    id: 7,
+    id: 8,
     titulo: "Memory Game",
     descripcion: " Memory game, developed in React and Tailwind CSS",
     tecnologias: "React y Tailwind CSS",
@@ -160,7 +186,7 @@ export const proyectosEn = [
     img: "/img/memorygame.png",
   },
   {
-    id: 8,
+    id: 9,
     titulo: "Random quote",
     descripcion: " App that displays a random quote from authors",
     tecnologias: "Component, props, useState",
