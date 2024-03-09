@@ -62,7 +62,7 @@
   box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.19);
 }
 
-.experience-entry:last-of-type {
+.experience-entry:nth-of-type(2n) {
   margin-top: 32px;
   text-align: right;
 }
