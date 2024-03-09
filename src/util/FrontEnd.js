@@ -103,6 +103,75 @@ export const proyectosES = [
     img: "/img/card-citas.png",
     categoria: "Front-End",
   },
+  {
+    id: 10,
+    titulo: "MiFinanzs",
+    descripcion:
+      " Proyecto diseñado para ayudarte a llevar un control efectivo de tus finanzas personales de manera sencilla y eficiente",
+    tecnologias:
+      "Next.js, Redux, axios, react-hook-form, validación de errores, HTML y CSS, CRUD ",
+    enlaceGitHub:
+      "https://github.com/No-Country/c14-17-ft-node-react/tree/80f7972e25d3ab69055c218cae11e09b7bf7debf",
+    enlaceNetlify: "https://no-country-1wexeud0b-castellano17.vercel.app/",
+    img: "/img/miFinanzs.png",
+    categoria: "Front-End",
+  },
+  {
+    id: 11,
+    titulo: "Trucking",
+    descripcion:
+      "App web diseñada para empresas que buscan gestionar eficientemente sus flotas de vehículos.",
+    tecnologias: "React.js Vite, JavaScript, Tailwind CSS, axios, Redux ",
+    enlaceGitHub:
+      "https://github.com/No-Country/s12-14-t-java-react/tree/e616654847ff1f4c580ddfc61a4fb061c4c0620c?tab=readme-ov-file",
+    enlaceNetlify: "https://s12-14-t-java-react.vercel.app/",
+    img: "/img/Trucking.png",
+    categoria: "Front-End",
+  },
+  {
+    id: 12,
+    titulo: "Control de Gastos",
+    descripcion: "Api de app de control de gastos para consumir.",
+    tecnologias:
+      "Node.js, Express, Sequelize, Swagger, JWT, Passport, Bcrypt, UUID",
+    enlaceGitHub: "https://github.com/castellano17/control-gastos-backend",
+    enlaceNetlify: "https://github.com/castellano17/control-gastos-backend",
+    img: "/img/backend.png",
+    categoria: "Back-End",
+  },
+  {
+    id: 13,
+    titulo: "Instagram Clone API",
+    descripcion: "Api clon de Instagram.",
+    tecnologias:
+      "Node.js, Express, Sequelize, Swagger, JWT, Passport, Bcrypt, UUID",
+    enlaceGitHub: "https://github.com/castellano17/instagram-api",
+    enlaceNetlify: "https://github.com/castellano17/instagram-api",
+    img: "/img/instagramApi.png",
+    categoria: "Back-End",
+  },
+  {
+    id: 14,
+    titulo: "API app chat ",
+    descripcion: "API de chat para consumir.",
+    tecnologias:
+      "Node.js, Express, Sequelize, Swagger, JWT, Passport, Bcrypt, UUID",
+    enlaceGitHub: "https://github.com/castellano17/appChat",
+    enlaceNetlify: "https://github.com/castellano17/appChat",
+    img: "/img/apiChat.png",
+    categoria: "Back-End",
+  },
+  {
+    id: 15,
+    titulo: "API CRUD Usuarios",
+    descripcion: "API CRUD de usuarios.",
+    tecnologias:
+      "Node.js, Express, Sequelize, Swagger, JWT, Passport, Bcrypt, UUID",
+    enlaceGitHub: "https://github.com/castellano17/usersdb",
+    enlaceNetlify: "https://github.com/castellano17/usersdb",
+    img: "/img/apiCRUDUser.png",
+    categoria: "Back-End",
+  },
 ];
 
 export const proyectosEn = [
@@ -209,5 +278,74 @@ export const proyectosEn = [
     enlaceNetlify: "https://card-citas-esmir.netlify.app/",
     img: "/img/card-citas.png",
     categoria: "Front-End",
+  },
+  {
+    id: 10,
+    titulo: "MiFinanzs",
+    descripcion:
+      "Project designed to help you maintain effective control of your personal finances in a simple and efficient manner.",
+    tecnologias:
+      "Next.js, Redux, axios, react-hook-form, validación de errores, HTML y CSS, CRUD ",
+    enlaceGitHub:
+      "https://github.com/No-Country/c14-17-ft-node-react/tree/80f7972e25d3ab69055c218cae11e09b7bf7debf",
+    enlaceNetlify: "https://no-country-1wexeud0b-castellano17.vercel.app/",
+    img: "/img/miFinanzs.png",
+    categoria: "Front-End",
+  },
+  {
+    id: 11,
+    titulo: "Trucking",
+    descripcion:
+      "Trucking is a web application tailored for companies seeking to efficiently manage their vehicle fleet",
+    tecnologias: "React.js Vite, JavaScript, Tailwind CSS, axios, Redux ",
+    enlaceGitHub:
+      "https://github.com/No-Country/s12-14-t-java-react/tree/e616654847ff1f4c580ddfc61a4fb061c4c0620c?tab=readme-ov-file",
+    enlaceNetlify: "https://s12-14-t-java-react.vercel.app/",
+    img: "/img/Trucking.png",
+    categoria: "Front-End",
+  },
+  {
+    id: 12,
+    titulo: "Expense Planner",
+    descripcion: "Expense control app API for consumption.",
+    tecnologias:
+      "Node.js, Express, Sequelize, Swagger, JWT, Passport, Bcrypt, UUID",
+    enlaceGitHub: "https://github.com/castellano17/control-gastos-backend",
+    enlaceNetlify: "https://github.com/castellano17/control-gastos-backend",
+    img: "/img/backend.png",
+    categoria: "Back-End",
+  },
+  {
+    id: 13,
+    titulo: "Instagram Clone API",
+    descripcion: "Api Instagram clon",
+    tecnologias:
+      "Node.js, Express, Sequelize, Swagger, JWT, Passport, Bcrypt, UUID",
+    enlaceGitHub: "https://github.com/castellano17/instagram-api",
+    enlaceNetlify: "https://github.com/castellano17/instagram-api",
+    img: "/img/instagramApi.png",
+    categoria: "Back-End",
+  },
+  {
+    id: 14,
+    titulo: "API app chat ",
+    descripcion: "Chat API for consumption.",
+    tecnologias:
+      "Node.js, Express, Sequelize, Swagger, JWT, Passport, Bcrypt, UUID",
+    enlaceGitHub: "https://github.com/castellano17/appChat",
+    enlaceNetlify: "https://github.com/castellano17/appChat",
+    img: "/img/apiChat.png",
+    categoria: "Back-End",
+  },
+  {
+    id: 15,
+    titulo: "API Users CRUD ",
+    descripcion: "API users CRUD.",
+    tecnologias:
+      "Node.js, Express, Sequelize, Swagger, JWT, Passport, Bcrypt, UUID",
+    enlaceGitHub: "https://github.com/castellano17/usersdb",
+    enlaceNetlify: "https://github.com/castellano17/usersdb",
+    img: "/img/apiCRUDUser.png",
+    categoria: "Back-End",
   },
 ];
