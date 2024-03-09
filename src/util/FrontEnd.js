@@ -101,7 +101,7 @@ export const proyectosES = [
     enlaceGitHub: "https://github.com/castellano17/app-citas-esmir",
     enlaceNetlify: "https://card-citas-esmir.netlify.app/",
     img: "/img/card-citas.png",
-    categoria: "Back-End",
+    categoria: "Front-End",
   },
 ];
 
@@ -208,6 +208,6 @@ export const proyectosEn = [
     enlaceGitHub: "https://github.com/castellano17/app-citas-esmir",
     enlaceNetlify: "https://card-citas-esmir.netlify.app/",
     img: "/img/card-citas.png",
-    categoria: "Back-End",
+    categoria: "Front-End",
   },
 ];
