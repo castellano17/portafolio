@@ -1,0 +1,117 @@
+/* .experiencie_container {
+  height: 100%;
+  margin-top: 40px;
+} */
+
+.experience-container {
+
+ // max-width: 900px;
+  margin: 0 auto;
+  padding-top: 32px;
+  background-color: var(--secondary);
+}
+
+.experience-container h3 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+  padding-top: 32px;
+}
+
+.container-experience {
+  // font-size: 34px;
+  gap: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 16px 16px 16px;
+
+}
+
+
+.experience-entry {
+  position: relative;
+}
+
+.experience-entry .experience-card {
+  width: 360px;
+}
+
+.experience-entry img {
+  width: 80%;
+  -webkit-box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.19);
+  box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.19);
+}
+
+
+.experience-entry .experience-card {
+  position: absolute;
+  background-color: var(--tertiary);
+  top: 50%;
+  right: 0;
+  border: none;
+  transform: translate(0, -50%);
+  -webkit-box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.19);
+  box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.19);
+}
+
+.experience-entry:last-of-type {
+  margin-top: 32px;
+  text-align: right;
+}
+
+
+/* .experience-entry:last-of-type .experience-card {
+  left: 0;
+} */
+
+.experience-entry:nth-of-type(2n) .experience-card {
+  left: 0;
+}
+
+@media (max-width: 600px) {
+  .experience-entry img {
+    width: 100%;
+  }
+  .experience-entry .experience-card {
+    position: static;
+    top: 0;
+    transform: translate(0, -10%);
+    width: 100%;
+  }
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.experience-description  {
+    font-size: 16px;.    
+  }
+
+  .experience-description p{
+    color: var(--primary);
+    padding: 8px 0;
+
+  }
+  
+  .experience-description .experience-titles {
+    color: var(--white);
+      font-weight: bold;
+    
+  }
+
+.experience-card {
+  padding: 16px;
+ // border: 2px solid #399078;
+  //width: 100%;
+}
+
+
+

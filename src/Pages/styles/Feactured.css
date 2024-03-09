@@ -1,5 +1,4 @@
 .feactured {
-  padding-top: 48px;
   background-color: var(--primary);
   padding-bottom: 32px;
   margin-top: 40px;
@@ -9,6 +8,31 @@
   text-align: center;
   font-size: 35px;
   margin-bottom: 25px;
+  color: var(--tertiary);
+}
+
+.portfolio-filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 0px 15px;
+}
+
+.portfolio-filter button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: var(--secondary);
+  color: var(--white);
+  font-size: 16px;
+  transition: 0.3s all;
+}
+
+.portfolio-filter button:hover {
+  background-color: var(--tertiary);
+  font-size: 18px;
 }
 
 .feactured__container-card {
@@ -16,7 +40,7 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 25px;
-  padding: 0 64px;
+  padding: 0 32px 40px 32px;
   max-width: 900px;
   margin: 0 auto;
 }

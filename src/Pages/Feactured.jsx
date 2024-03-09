@@ -1,13 +1,50 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles/Feactured.css";
 
 const Feactured = ({ translations, frontEndTranslations }) => {
+  const [categoriaSeleccionada, setCategoriaSeleccionada] = useState("all");
+
+  const handleFilter = (categoria) => {
+    setCategoriaSeleccionada(categoria);
+  };
+
+  const proyectosFiltrados =
+    categoriaSeleccionada === "all"
+      ? frontEndTranslations
+      : frontEndTranslations.filter(
+          (proyecto) => proyecto.categoria === categoriaSeleccionada
+        );
+
   return (
-    <div id="feactured" className="feactured">
+    <div id="feactured" className="feactured ">
       <h3>{translations.project.title}</h3>
 
+      <div className="portfolio-filter">
+        <button
+          type="button"
+          className={categoriaSeleccionada === "all" ? "active" : ""}
+          onClick={() => handleFilter("all")}
+        >
+          Todos
+        </button>
+        <button
+          type="button"
+          className={categoriaSeleccionada === "front-end" ? "active" : ""}
+          onClick={() => handleFilter("Front-End")}
+        >
+          Front-End
+        </button>
+        <button
+          type="button"
+          className={categoriaSeleccionada === "back-end" ? "active" : ""}
+          onClick={() => handleFilter("Back-End")}
+        >
+          Back-End
+        </button>
+      </div>
+
       <div className="feactured__container-card">
-        {frontEndTranslations.map((proyecto) => (
+        {proyectosFiltrados.map((proyecto) => (
           <div key={proyecto.id} className="contenedor">
             <div className="glass">
               <h2 className="feactured__glass-title">
@@ -32,7 +69,7 @@ const Feactured = ({ translations, frontEndTranslations }) => {
                   target="_blank"
                   className="feactured__glass-contenido"
                 >
-                  <i className="feactured-icon bx bx-git-branch"></i>
+                  <i className="feactured-icon bx bx-link-external"></i>
                 </a>
               </div>
             </div>

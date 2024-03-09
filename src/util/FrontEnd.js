@@ -10,6 +10,7 @@ export const proyectosES = [
       "https://docs.google.com/document/d/1LasmzHb4sSQidOyUDAPFiYFE1MUWLa1m0hhbNM3H2Aw/edit?usp=sharing",
     enlaceNetlify: "https://control-presupuesto-esmir.netlify.app/",
     img: "/img/control-presupuesto.png",
+    categoria: "Front-End",
   },
   {
     id: 2,
@@ -21,6 +22,7 @@ export const proyectosES = [
     enlaceGitHub: "https://github.com/castellano17/citas-veterinaria",
     enlaceNetlify: "https://citas-veterinaria-esmir.netlify.app/",
     img: "/img/citas-veterinaria.png",
+    categoria: "Front-End",
   },
 
   {
@@ -32,6 +34,7 @@ export const proyectosES = [
     enlaceGitHub: "https://github.com/castellano17/weather2",
     enlaceNetlify: "https://weather2-esmir.netlify.app/",
     img: "/img/weather.png",
+    categoria: "Front-End",
   },
   {
     id: 4,
@@ -43,6 +46,7 @@ export const proyectosES = [
     enlaceGitHub: "https://github.com/castellano17/entregable3",
     enlaceNetlify: "https://rick-and-morty-esmir.netlify.app/",
     img: "/img/RickandMorty.png",
+    categoria: "Front-End",
   },
   {
     id: 5,
@@ -54,6 +58,7 @@ export const proyectosES = [
     enlaceGitHub: "https://github.com/castellano17/entregable5",
     enlaceNetlify: "https://entregable5-esmir.netlify.app",
     img: "/img/pokedex.png",
+    categoria: "Front-End",
   },
   {
     id: 6,
@@ -65,6 +70,7 @@ export const proyectosES = [
     enlaceGitHub: "https://github.com/castellano17/entregable6",
     enlaceNetlify: "https://entregable6-esmir.netlify.app",
     img: "/img/ecommerce.png",
+    categoria: "Front-End",
   },
   {
     id: 7,
@@ -75,6 +81,7 @@ export const proyectosES = [
     enlaceGitHub: "https://github.com/castellano17/entregable4",
     enlaceNetlify: "https://entregable4-esmir.netlify.app/",
     img: "/img/usuarios.png",
+    categoria: "Front-End",
   },
   {
     id: 8,
@@ -84,6 +91,7 @@ export const proyectosES = [
     enlaceGitHub: "https://github.com/castellano17/juegomemoria",
     enlaceNetlify: "https://memorygame-esmir.netlify.app/",
     img: "/img/memorygame.png",
+    categoria: "Front-End",
   },
   {
     id: 9,
@@ -93,6 +101,7 @@ export const proyectosES = [
     enlaceGitHub: "https://github.com/castellano17/app-citas-esmir",
     enlaceNetlify: "https://card-citas-esmir.netlify.app/",
     img: "/img/card-citas.png",
+    categoria: "Back-End",
   },
 ];
 
@@ -108,6 +117,7 @@ export const proyectosEn = [
       "https://docs.google.com/document/d/1LasmzHb4sSQidOyUDAPFiYFE1MUWLa1m0hhbNM3H2Aw/edit?usp=sharing",
     enlaceNetlify: "https://control-presupuesto-esmir.netlify.app/",
     img: "/img/control-presupuesto.png",
+    categoria: "Front-End",
   },
   {
     id: 2,
@@ -119,6 +129,7 @@ export const proyectosEn = [
     enlaceGitHub: "https://github.com/castellano17/citas-veterinaria",
     enlaceNetlify: "https://citas-veterinaria-esmir.netlify.app/",
     img: "/img/citas-veterinaria.png",
+    categoria: "Front-End",
   },
 
   {
@@ -130,6 +141,7 @@ export const proyectosEn = [
     enlaceGitHub: "https://github.com/castellano17/weather2",
     enlaceNetlify: "https://weather2-esmir.netlify.app/",
     img: "/img/weather.png",
+    categoria: "Front-End",
   },
   {
     id: 4,
@@ -141,6 +153,7 @@ export const proyectosEn = [
     enlaceGitHub: "https://github.com/castellano17/entregable3",
     enlaceNetlify: "https://rick-and-morty-esmir.netlify.app/",
     img: "/img/RickandMorty.png",
+    categoria: "Front-End",
   },
   {
     id: 5,
@@ -152,6 +165,7 @@ export const proyectosEn = [
     enlaceGitHub: "https://github.com/castellano17/entregable5",
     enlaceNetlify: "https://entregable5-esmir.netlify.app",
     img: "/img/pokedex.png",
+    categoria: "Front-End",
   },
   {
     id: 6,
@@ -163,6 +177,7 @@ export const proyectosEn = [
     enlaceGitHub: "https://github.com/castellano17/entregable6",
     enlaceNetlify: "https://entregable6-esmir.netlify.app",
     img: "/img/ecommerce.png",
+    categoria: "Front-End",
   },
   {
     id: 7,
@@ -173,6 +188,7 @@ export const proyectosEn = [
     enlaceGitHub: "https://github.com/castellano17/entregable4",
     enlaceNetlify: "https://entregable4-esmir.netlify.app/",
     img: "/img/usuarios.png",
+    categoria: "Front-End",
   },
   {
     id: 8,
@@ -182,6 +198,7 @@ export const proyectosEn = [
     enlaceGitHub: "https://github.com/castellano17/juegomemoria",
     enlaceNetlify: "https://memorygame-esmir.netlify.app/",
     img: "/img/memorygame.png",
+    categoria: "Front-End",
   },
   {
     id: 9,
@@ -191,5 +208,6 @@ export const proyectosEn = [
     enlaceGitHub: "https://github.com/castellano17/app-citas-esmir",
     enlaceNetlify: "https://card-citas-esmir.netlify.app/",
     img: "/img/card-citas.png",
+    categoria: "Back-End",
   },
 ];

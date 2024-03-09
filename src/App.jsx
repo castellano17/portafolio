@@ -11,6 +11,7 @@ import { en } from "./translations/en.js";
 import { es } from "./translations/es.js";
 import { studiesEN, studiesEs } from "./util/studies";
 import { proyectosES, proyectosEn } from "./util/FrontEnd";
+import { experienceEn, experienceEs } from "./util/Experience.js";
 
 function App() {
   const [theme, setTheme] = useLocalStorage("theme", "dark");
@@ -32,6 +33,9 @@ function App() {
   const translations = language === "es" ? es : en; // Obtiene las traducciones según el idioma actual
   const studiesTranslations = language === "es" ? studiesEs : studiesEN; // Obtiene las traducciones de "studies" según el idioma actual
   const frontEndTranslations = language === "es" ? proyectosES : proyectosEn; // Obtienes las traducciones de "FrontEnd" según el idioma actual
+
+  const experienceTranslations =
+    language === "es" ? experienceEs : experienceEn; // Obtienes las traducciones de "Experience" según el idioma actual
 
   useEffect(() => {
     document.body.dataset.theme = theme;
@@ -60,6 +64,7 @@ function App() {
               studiesTranslations={studiesTranslations}
               frontEndTranslations={frontEndTranslations}
               language={language}
+              experienceTranslations={experienceTranslations}
             />
           }
         />

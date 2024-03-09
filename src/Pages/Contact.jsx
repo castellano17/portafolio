@@ -3,7 +3,7 @@ import "./styles/Contact.css";
 
 const Contact = ({ translations }) => {
   return (
-    <div id="contact" className="contact shadowBg">
+    <div id="contact" className="contact">
       <h3>{translations.contact.title}</h3>
       <div className="contact__container">
         <div className="contact__container-component">

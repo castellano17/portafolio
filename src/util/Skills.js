@@ -44,7 +44,7 @@ export const skills = [
     name: "MySQL",
   },
   {
-    id: 11,
+    id: 12,
     name: "Redux-forms",
   },
 ];

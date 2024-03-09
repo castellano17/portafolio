@@ -30,6 +30,7 @@ export const en = {
       one: "My",
       two: "studies",
     },
+    button: "Donwload",
   },
 
   //contact
@@ -47,6 +48,10 @@ export const en = {
   //projects
   project: {
     title: "Proyects",
+  },
+
+  Experience: {
+    title: "Experience",
   },
 
   //footer

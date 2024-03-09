@@ -2,13 +2,16 @@ import React from "react";
 import About from "./About";
 import Contact from "./Contact";
 import Feactured from "./Feactured";
+import Estudies from "./Estudies";
 import Footer from "./Footer";
 import "./styles/Home.css";
+import { Experience } from "./Experience";
 
 const Home = ({
   translations,
   studiesTranslations,
   frontEndTranslations,
+  experienceTranslations,
   language,
 }) => {
   return (
@@ -58,6 +61,14 @@ const Home = ({
       <Feactured
         translations={translations}
         frontEndTranslations={frontEndTranslations}
+      />
+      <Experience
+        translations={translations}
+        experienceTranslations={experienceTranslations}
+      />
+      <Estudies
+        translations={translations}
+        studiesTranslations={studiesTranslations}
       />
       <Contact translations={translations} />
       <Footer translations={translations} />
