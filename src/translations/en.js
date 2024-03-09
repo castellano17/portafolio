@@ -4,7 +4,9 @@ export const en = {
     menuOne: "Home",
     menuTwo: "About Me",
     menuThree: "Projects",
-    menuFour: "Contact",
+    menuFour: "Experience",
+    menuFive: "Estudies",
+    menuSix: "Contact",
     themes: {
       dark: "Dark",
       light: "Light",

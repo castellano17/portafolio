@@ -5,7 +5,7 @@ import "boxicons";
 export const Experience = ({ translations, experienceTranslations }) => {
   return (
     <>
-      <div id="estudies" className="experience-container shadowBg">
+      <div id="experience" className="experience-container shadowBg">
         <h3> {translations.Experience.title} </h3>
         <section className="container-experience">
           {experienceTranslations.map((experience) => (

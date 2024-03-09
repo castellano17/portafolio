@@ -79,7 +79,7 @@ const Navbar = ({
           </div>
           <div className="navbar__link-horizontal">
             <ScrollLink
-              to="contact"
+              to="experience"
               spy={true}
               smooth={true}
               offset={-100}
@@ -87,6 +87,31 @@ const Navbar = ({
               className="scroll-link"
             >
               {translations.navbar.menuFour}
+            </ScrollLink>
+          </div>
+          <div className="navbar__link-horizontal">
+            <ScrollLink
+              to="estudies"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+              className="scroll-link"
+            >
+              {translations.navbar.menuFive}
+            </ScrollLink>
+          </div>
+
+          <div className="navbar__link-horizontal">
+            <ScrollLink
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+              className="scroll-link"
+            >
+              {translations.navbar.menuSix}
             </ScrollLink>
           </div>
         </div>
@@ -136,8 +161,18 @@ const Navbar = ({
               </RouterLink>
             </div>
             <div className="" onClick={handleCloseMenu}>
-              <RouterLink to="/contact">
+              <RouterLink to="/experience">
                 {translations.navbar.menuFour}
+              </RouterLink>
+            </div>
+            <div className="" onClick={handleCloseMenu}>
+              <RouterLink to="/estudies">
+                {translations.navbar.menuFive}
+              </RouterLink>
+            </div>
+            <div className="" onClick={handleCloseMenu}>
+              <RouterLink to="/contact">
+                {translations.navbar.menuSix}
               </RouterLink>
             </div>
           </div>

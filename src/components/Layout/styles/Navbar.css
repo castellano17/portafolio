@@ -33,7 +33,8 @@
 
 .navbar__link-horizontal {
   display: flex;
-  gap: 16px;
+  gap: 12px;
+  margin-right: 5px;
 }
 .navbar__menu {
   display: none;
@@ -78,6 +79,7 @@
   text-align: center;
   text-transform: uppercase;
   display: block;
+  margin-right: 10px;
 }
 
 .text-toggle2 {
