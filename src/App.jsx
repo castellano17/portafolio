@@ -12,7 +12,7 @@ import { es } from "./translations/es.js";
 import { studiesEN, studiesEs } from "./util/studies";
 import { proyectosES, proyectosEn } from "./util/FrontEnd";
 import { experienceEn, experienceEs } from "./util/Experience.js";
-import { Experience } from "./Pages/Experience.jsx";
+import Experience from "./Pages/Experience.jsx";
 import Estudies from "./Pages/Estudies.jsx";
 
 function App() {

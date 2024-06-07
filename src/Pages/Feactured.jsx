@@ -1,22 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useCallback, useMemo, memo } from "react";
 import "./styles/Feactured.css";
 
 const Feactured = ({ translations, frontEndTranslations }) => {
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState("all");
 
-  const handleFilter = (categoria) => {
+  const handleFilter = useCallback((categoria) => {
     setCategoriaSeleccionada(categoria);
-  };
+  }, []);
 
-  const proyectosFiltrados =
-    categoriaSeleccionada === "all"
+  const proyectosFiltrados = useMemo(() => {
+    return categoriaSeleccionada === "all"
       ? frontEndTranslations
       : frontEndTranslations.filter(
           (proyecto) => proyecto.categoria === categoriaSeleccionada
         );
+  }, [categoriaSeleccionada, frontEndTranslations]);
 
   return (
-    <div id="feactured" className="feactured ">
+    <div id="feactured" className="feactured">
       <h3>{translations.project.title}</h3>
 
       <div className="portfolio-filter">
@@ -29,14 +30,14 @@ const Feactured = ({ translations, frontEndTranslations }) => {
         </button>
         <button
           type="button"
-          className={categoriaSeleccionada === "front-end" ? "active" : ""}
+          className={categoriaSeleccionada === "Front-End" ? "active" : ""}
           onClick={() => handleFilter("Front-End")}
         >
           Front-End
         </button>
         <button
           type="button"
-          className={categoriaSeleccionada === "back-end" ? "active" : ""}
+          className={categoriaSeleccionada === "Back-End" ? "active" : ""}
           onClick={() => handleFilter("Back-End")}
         >
           Back-End
@@ -60,6 +61,7 @@ const Feactured = ({ translations, frontEndTranslations }) => {
                 <a
                   href={proyecto.enlaceGitHub}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="feactured__glass-contenido"
                 >
                   <i className="feactured-icon bx bxl-github"></i>
@@ -67,6 +69,7 @@ const Feactured = ({ translations, frontEndTranslations }) => {
                 <a
                   href={proyecto.enlaceNetlify}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="feactured__glass-contenido"
                 >
                   <i className="feactured-icon bx bx-link-external"></i>
@@ -75,7 +78,7 @@ const Feactured = ({ translations, frontEndTranslations }) => {
             </div>
 
             <div className="imagen">
-              <img src={proyecto.img} alt="" />
+              <img src={proyecto.img} alt={proyecto.titulo} loading="lazy" />
             </div>
           </div>
         ))}
@@ -84,4 +87,4 @@ const Feactured = ({ translations, frontEndTranslations }) => {
   );
 };
 
-export default Feactured;
+export default memo(Feactured);

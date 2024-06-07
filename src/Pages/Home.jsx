@@ -5,7 +5,7 @@ import Feactured from "./Feactured";
 import Estudies from "./Estudies";
 import Footer from "./Footer";
 import "./styles/Home.css";
-import { Experience } from "./Experience";
+import Experience from "./Experience";
 
 const Home = ({
   translations,

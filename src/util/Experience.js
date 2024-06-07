@@ -21,7 +21,7 @@ export const experienceEs = [
       "Participé activamente en proyectos de desarrollo web de la empresa ACADEMLO",
     enlaceGitHub: "https://github.com/castellano17",
     enlaceWeb: "https://certiwise.co/verify/6",
-    img: "img/pasantia-Academlo.png",
+    img: "img/pasantia-Academlo.jpg",
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ export const experienceEs = [
       "Next.JS, React.JS, Zudtand, Tailwindcss, HTML, CSS, Tailwind, Figma,GitHub, Jira, Trello, Slack, Notion, .",
     enlaceGitHub: "https://github.com/castellano17",
     enlaceWeb: "https://codefyplus.com/",
-    img: "img/CodeFy.png",
+    img: "img/CodeFy.jpg",
   },
   {
     id: 4,
@@ -43,7 +43,7 @@ export const experienceEs = [
       "Next.JS, React.JS, Node.js, Postgresql, Redux, Tailwindcss, HTML, CSS, Tailwind, Figma,GitHub, Jira, Trello, Slack, Notion, .",
     enlaceGitHub: "https://github.com/castellano17?tab=repositories",
     enlaceWeb: "https://certificates.academlo.com/en/verify/40809561884902",
-    img: "img/AcademloCertificado.png",
+    img: "img/AcademloCertificado.jpg",
   },
 ];
 
@@ -70,7 +70,7 @@ export const experienceEn = [
       "I actively participated in web development projects at ACADEMLO.",
     enlaceGitHub: "https://github.com/castellano17",
     enlaceWeb: "https://certiwise.co/verify/6",
-    img: "img/pasantia-Academlo.png",
+    img: "img/pasantia-Academlo.jpg",
   },
   {
     id: 3,
@@ -81,7 +81,7 @@ export const experienceEn = [
       "Next.JS, React.JS, Zudtand, Tailwindcss, HTML, CSS, Tailwind, Figma,GitHub, Jira, Trello, Slack, Notion, .",
     enlaceGitHub: "https://github.com/castellano17",
     enlaceWeb: "https://codefyplus.com/",
-    img: "img/CodeFy.png",
+    img: "img/CodeFy.jpg",
   },
   {
     id: 4,
@@ -92,6 +92,6 @@ export const experienceEn = [
       "Next.JS, React.JS, Node.js, Postgresql, Redux, Tailwindcss, HTML, CSS, Tailwind, Figma,GitHub, Jira, Trello, Slack, Notion, .",
     enlaceGitHub: "https://github.com/castellano17?tab=repositories",
     enlaceWeb: "https://certificates.academlo.com/en/verify/40809561884902",
-    img: "img/AcademloCertificado.png",
+    img: "img/AcademloCertificado.jpg",
   },
 ];

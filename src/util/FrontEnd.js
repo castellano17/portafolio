@@ -9,7 +9,7 @@ export const proyectosES = [
     enlaceGitHub:
       "https://docs.google.com/document/d/1LasmzHb4sSQidOyUDAPFiYFE1MUWLa1m0hhbNM3H2Aw/edit?usp=sharing",
     enlaceNetlify: "https://control-presupuesto-esmir.netlify.app/",
-    img: "/img/control-presupuesto.png",
+    img: "/img/control-presupuesto.jpg",
     categoria: "Front-End",
   },
   {
@@ -21,7 +21,7 @@ export const proyectosES = [
       "React js, JavaScript, Tailwindcss, useEffect useState, localStorage",
     enlaceGitHub: "https://github.com/castellano17/citas-veterinaria",
     enlaceNetlify: "https://citas-veterinaria-esmir.netlify.app/",
-    img: "/img/citas-veterinaria.png",
+    img: "/img/citas-veterinaria.jpg",
     categoria: "Front-End",
   },
 
@@ -33,7 +33,7 @@ export const proyectosES = [
     tecnologias: "React js, JavaScript, CSS, useEffect, Consumo de API's",
     enlaceGitHub: "https://github.com/castellano17/weather2",
     enlaceNetlify: "https://weather2-esmir.netlify.app/",
-    img: "/img/weather.png",
+    img: "/img/weather.jpg",
     categoria: "Front-End",
   },
   {
@@ -45,7 +45,7 @@ export const proyectosES = [
       "React js, JavaScript, CSS, keys, inputs controlados, renderizado condicional, loading, consumo de API'S",
     enlaceGitHub: "https://github.com/castellano17/entregable3",
     enlaceNetlify: "https://rick-and-morty-esmir.netlify.app/",
-    img: "/img/RickandMorty.png",
+    img: "/img/RickandMorty.jpg",
     categoria: "Front-End",
   },
   {
@@ -57,7 +57,7 @@ export const proyectosES = [
       "React js, JavaScript, CSS, React router-dom, GIT, Redux, Axios",
     enlaceGitHub: "https://github.com/castellano17/entregable5",
     enlaceNetlify: "https://entregable5-esmir.netlify.app",
-    img: "/img/pokedex.png",
+    img: "/img/pokedex.jpg",
     categoria: "Front-End",
   },
   {
@@ -69,7 +69,7 @@ export const proyectosES = [
       "Teact JS, JavaScrit, Redux, axios, React-Router-dom, HTML y CSS",
     enlaceGitHub: "https://github.com/castellano17/entregable6",
     enlaceNetlify: "https://entregable6-esmir.netlify.app",
-    img: "/img/ecommerce.png",
+    img: "/img/ecommerce.jpg",
     categoria: "Front-End",
   },
   {
@@ -80,7 +80,7 @@ export const proyectosES = [
       "JavaScrit, axios, react-hook-form, validación errores, HTML y CSS, CRUD, Métodos HTTP ",
     enlaceGitHub: "https://github.com/castellano17/entregable4",
     enlaceNetlify: "https://entregable4-esmir.netlify.app/",
-    img: "/img/usuarios.png",
+    img: "/img/usuarios.jpg",
     categoria: "Front-End",
   },
   {
@@ -90,7 +90,7 @@ export const proyectosES = [
     tecnologias: "React y Tailwind CSS",
     enlaceGitHub: "https://github.com/castellano17/juegomemoria",
     enlaceNetlify: "https://memorygame-esmir.netlify.app/",
-    img: "/img/memorygame.png",
+    img: "/img/memorygame.jpg",
     categoria: "Front-End",
   },
   {
@@ -100,7 +100,7 @@ export const proyectosES = [
     tecnologias: "Componente, props, useState",
     enlaceGitHub: "https://github.com/castellano17/app-citas-esmir",
     enlaceNetlify: "https://card-citas-esmir.netlify.app/",
-    img: "/img/card-citas.png",
+    img: "/img/card-citas.jpg",
     categoria: "Front-End",
   },
   {
@@ -113,7 +113,7 @@ export const proyectosES = [
     enlaceGitHub:
       "https://github.com/No-Country/c14-17-ft-node-react/tree/80f7972e25d3ab69055c218cae11e09b7bf7debf",
     enlaceNetlify: "https://no-country-1wexeud0b-castellano17.vercel.app/",
-    img: "/img/miFinanzs.png",
+    img: "/img/miFinanzs.jpg",
     categoria: "Front-End",
   },
   {
@@ -125,7 +125,7 @@ export const proyectosES = [
     enlaceGitHub:
       "https://github.com/No-Country/s12-14-t-java-react/tree/e616654847ff1f4c580ddfc61a4fb061c4c0620c?tab=readme-ov-file",
     enlaceNetlify: "https://s12-14-t-java-react.vercel.app/",
-    img: "/img/Trucking.png",
+    img: "/img/Trucking.jpg",
     categoria: "Front-End",
   },
   {
@@ -136,7 +136,7 @@ export const proyectosES = [
       "Node.js, Express, Sequelize, Swagger, JWT, Passport, Bcrypt, UUID",
     enlaceGitHub: "https://github.com/castellano17/control-gastos-backend",
     enlaceNetlify: "https://github.com/castellano17/control-gastos-backend",
-    img: "/img/backend.png",
+    img: "/img/backend.jpg",
     categoria: "Back-End",
   },
   {
@@ -147,7 +147,7 @@ export const proyectosES = [
       "Node.js, Express, Sequelize, Swagger, JWT, Passport, Bcrypt, UUID",
     enlaceGitHub: "https://github.com/castellano17/instagram-api",
     enlaceNetlify: "https://github.com/castellano17/instagram-api",
-    img: "/img/instagramApi.png",
+    img: "/img/instagramApi.jpg",
     categoria: "Back-End",
   },
   {
@@ -158,7 +158,7 @@ export const proyectosES = [
       "Node.js, Express, Sequelize, Swagger, JWT, Passport, Bcrypt, UUID",
     enlaceGitHub: "https://github.com/castellano17/appChat",
     enlaceNetlify: "https://github.com/castellano17/appChat",
-    img: "/img/apiChat.png",
+    img: "/img/apiChat.jpg",
     categoria: "Back-End",
   },
   {
@@ -169,7 +169,7 @@ export const proyectosES = [
       "Node.js, Express, Sequelize, Swagger, JWT, Passport, Bcrypt, UUID",
     enlaceGitHub: "https://github.com/castellano17/usersdb",
     enlaceNetlify: "https://github.com/castellano17/usersdb",
-    img: "/img/apiCRUDUser.png",
+    img: "/img/apiCRUDUser.jpg",
     categoria: "Back-End",
   },
 ];
@@ -185,7 +185,7 @@ export const proyectosEn = [
     enlaceGitHub:
       "https://docs.google.com/document/d/1LasmzHb4sSQidOyUDAPFiYFE1MUWLa1m0hhbNM3H2Aw/edit?usp=sharing",
     enlaceNetlify: "https://control-presupuesto-esmir.netlify.app/",
-    img: "/img/control-presupuesto.png",
+    img: "/img/control-presupuesto.jpg",
     categoria: "Front-End",
   },
   {
@@ -197,7 +197,7 @@ export const proyectosEn = [
       "React js, JavaScript, Tailwindcss, useEffect useState, localStorage",
     enlaceGitHub: "https://github.com/castellano17/citas-veterinaria",
     enlaceNetlify: "https://citas-veterinaria-esmir.netlify.app/",
-    img: "/img/citas-veterinaria.png",
+    img: "/img/citas-veterinaria.jpg",
     categoria: "Front-End",
   },
 
@@ -209,7 +209,7 @@ export const proyectosEn = [
     tecnologias: "React js, JavaScript, CSS, useEffect, API consumption",
     enlaceGitHub: "https://github.com/castellano17/weather2",
     enlaceNetlify: "https://weather2-esmir.netlify.app/",
-    img: "/img/weather.png",
+    img: "/img/weather.jpg",
     categoria: "Front-End",
   },
   {
@@ -221,7 +221,7 @@ export const proyectosEn = [
       "React js, JavaScript, CSS, keys, Controlled inputs, conditional rendering, loading, API consumption",
     enlaceGitHub: "https://github.com/castellano17/entregable3",
     enlaceNetlify: "https://rick-and-morty-esmir.netlify.app/",
-    img: "/img/RickandMorty.png",
+    img: "/img/RickandMorty.jpg",
     categoria: "Front-End",
   },
   {
@@ -233,7 +233,7 @@ export const proyectosEn = [
       "React js, JavaScript, CSS, React router-dom, GIT, Redux, Axios",
     enlaceGitHub: "https://github.com/castellano17/entregable5",
     enlaceNetlify: "https://entregable5-esmir.netlify.app",
-    img: "/img/pokedex.png",
+    img: "/img/pokedex.jpg",
     categoria: "Front-End",
   },
   {
@@ -245,7 +245,7 @@ export const proyectosEn = [
       "Teact JS, JavaScrit, Redux, axios, React-Router-dom, HTML y CSS",
     enlaceGitHub: "https://github.com/castellano17/entregable6",
     enlaceNetlify: "https://entregable6-esmir.netlify.app",
-    img: "/img/ecommerce.png",
+    img: "/img/ecommerce.jpg",
     categoria: "Front-End",
   },
   {
@@ -256,7 +256,7 @@ export const proyectosEn = [
       "JavaScrit, axios, react-hook-form, Error validation, HTML y CSS, CRUD, methods HTTP ",
     enlaceGitHub: "https://github.com/castellano17/entregable4",
     enlaceNetlify: "https://entregable4-esmir.netlify.app/",
-    img: "/img/usuarios.png",
+    img: "/img/usuarios.jpg",
     categoria: "Front-End",
   },
   {
@@ -266,7 +266,7 @@ export const proyectosEn = [
     tecnologias: "React y Tailwind CSS",
     enlaceGitHub: "https://github.com/castellano17/juegomemoria",
     enlaceNetlify: "https://memorygame-esmir.netlify.app/",
-    img: "/img/memorygame.png",
+    img: "/img/memorygame.jpg",
     categoria: "Front-End",
   },
   {
@@ -276,7 +276,7 @@ export const proyectosEn = [
     tecnologias: "Component, props, useState",
     enlaceGitHub: "https://github.com/castellano17/app-citas-esmir",
     enlaceNetlify: "https://card-citas-esmir.netlify.app/",
-    img: "/img/card-citas.png",
+    img: "/img/card-citas.jpg",
     categoria: "Front-End",
   },
   {
@@ -289,7 +289,7 @@ export const proyectosEn = [
     enlaceGitHub:
       "https://github.com/No-Country/c14-17-ft-node-react/tree/80f7972e25d3ab69055c218cae11e09b7bf7debf",
     enlaceNetlify: "https://no-country-1wexeud0b-castellano17.vercel.app/",
-    img: "/img/miFinanzs.png",
+    img: "/img/miFinanzs.jpg",
     categoria: "Front-End",
   },
   {
@@ -301,7 +301,7 @@ export const proyectosEn = [
     enlaceGitHub:
       "https://github.com/No-Country/s12-14-t-java-react/tree/e616654847ff1f4c580ddfc61a4fb061c4c0620c?tab=readme-ov-file",
     enlaceNetlify: "https://s12-14-t-java-react.vercel.app/",
-    img: "/img/Trucking.png",
+    img: "/img/Trucking.jpg",
     categoria: "Front-End",
   },
   {
@@ -312,7 +312,7 @@ export const proyectosEn = [
       "Node.js, Express, Sequelize, Swagger, JWT, Passport, Bcrypt, UUID",
     enlaceGitHub: "https://github.com/castellano17/control-gastos-backend",
     enlaceNetlify: "https://github.com/castellano17/control-gastos-backend",
-    img: "/img/backend.png",
+    img: "/img/backend.jpg",
     categoria: "Back-End",
   },
   {
@@ -323,7 +323,7 @@ export const proyectosEn = [
       "Node.js, Express, Sequelize, Swagger, JWT, Passport, Bcrypt, UUID",
     enlaceGitHub: "https://github.com/castellano17/instagram-api",
     enlaceNetlify: "https://github.com/castellano17/instagram-api",
-    img: "/img/instagramApi.png",
+    img: "/img/instagramApi.jpg",
     categoria: "Back-End",
   },
   {
@@ -334,7 +334,7 @@ export const proyectosEn = [
       "Node.js, Express, Sequelize, Swagger, JWT, Passport, Bcrypt, UUID",
     enlaceGitHub: "https://github.com/castellano17/appChat",
     enlaceNetlify: "https://github.com/castellano17/appChat",
-    img: "/img/apiChat.png",
+    img: "/img/apiChat.jpg",
     categoria: "Back-End",
   },
   {
@@ -345,7 +345,7 @@ export const proyectosEn = [
       "Node.js, Express, Sequelize, Swagger, JWT, Passport, Bcrypt, UUID",
     enlaceGitHub: "https://github.com/castellano17/usersdb",
     enlaceNetlify: "https://github.com/castellano17/usersdb",
-    img: "/img/apiCRUDUser.png",
+    img: "/img/apiCRUDUser.jpg",
     categoria: "Back-End",
   },
 ];
