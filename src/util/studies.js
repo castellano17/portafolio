@@ -108,7 +108,7 @@ export const studiesEs = [
     institution: "Universidad URACCAN",
     date: "2012-2016",
     description: "Licenciatura en Informática Administrativa",
-    img: "./img/uraccan.png",
+    img: "./img/uraccan.jpg",
     link: "https://drive.google.com/file/d/1SiujntM2O8GsmpFcj3f6RrO3BjKI3dO7/view?usp=drive_link",
   },
 ];
@@ -224,7 +224,7 @@ export const studiesEN = [
     institution: " URACCAN University",
     date: "2012-2016",
     description: "Bachelor's Degree in Administrative Informatics",
-    img: "./img/uraccan.png",
+    img: "./img/uraccan.jpg",
     link: "https://drive.google.com/file/d/1SiujntM2O8GsmpFcj3f6RrO3BjKI3dO7/view?usp=drive_link",
   },
 ];
