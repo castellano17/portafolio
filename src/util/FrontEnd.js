@@ -128,8 +128,20 @@ export const proyectosES = [
     img: "/img/Trucking.jpg",
     categoria: "Front-End",
   },
-  {
+   {
     id: 12,
+    titulo: "Blackjack",
+    descripcion:
+      "Para prácticar JavaScript: array, funciones, uso de fórmulas.",
+    tecnologias: "JavaScript, CSS,HMTL",
+    enlaceGitHub:
+      "https://github.com/castellano17/Blackjack",
+    enlaceNetlify: "https://blackjack-gray-omega.vercel.app/",
+    img: "/img/Blackjack.jpg",
+    categoria: "Front-End",
+  },
+  {
+    id: 13,
     titulo: "Control de Gastos",
     descripcion: "Api de app de control de gastos para consumir.",
     tecnologias:
@@ -140,7 +152,7 @@ export const proyectosES = [
     categoria: "Back-End",
   },
   {
-    id: 13,
+    id: 14,
     titulo: "Instagram Clone API",
     descripcion: "Api clon de Instagram.",
     tecnologias:
@@ -151,7 +163,7 @@ export const proyectosES = [
     categoria: "Back-End",
   },
   {
-    id: 14,
+    id: 15,
     titulo: "API app chat ",
     descripcion: "API de chat para consumir.",
     tecnologias:
@@ -162,7 +174,7 @@ export const proyectosES = [
     categoria: "Back-End",
   },
   {
-    id: 15,
+    id: 16,
     titulo: "API CRUD Usuarios",
     descripcion: "API CRUD de usuarios.",
     tecnologias:
@@ -304,8 +316,20 @@ export const proyectosEn = [
     img: "/img/Trucking.jpg",
     categoria: "Front-End",
   },
-  {
+     {
     id: 12,
+    titulo: "Blackjack",
+    descripcion:
+      "To practice JavaScript: array, functions, use of formulas.",
+    tecnologias: "JavaScript, CSS,HMTL",
+    enlaceGitHub:
+      "https://github.com/castellano17/Blackjack",
+    enlaceNetlify: "https://blackjack-gray-omega.vercel.app/",
+    img: "/img/Blackjack.jpg",
+    categoria: "Front-End",
+  },
+  {
+    id: 13,
     titulo: "Expense Planner",
     descripcion: "Expense control app API for consumption.",
     tecnologias:
@@ -316,7 +340,7 @@ export const proyectosEn = [
     categoria: "Back-End",
   },
   {
-    id: 13,
+    id: 14,
     titulo: "Instagram Clone API",
     descripcion: "Api Instagram clon",
     tecnologias:
@@ -327,7 +351,7 @@ export const proyectosEn = [
     categoria: "Back-End",
   },
   {
-    id: 14,
+    id: 15,
     titulo: "API app chat ",
     descripcion: "Chat API for consumption.",
     tecnologias:
@@ -338,7 +362,7 @@ export const proyectosEn = [
     categoria: "Back-End",
   },
   {
-    id: 15,
+    id: 16,
     titulo: "API Users CRUD ",
     descripcion: "API users CRUD.",
     tecnologias:
