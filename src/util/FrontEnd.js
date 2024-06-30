@@ -137,7 +137,7 @@ export const proyectosES = [
     enlaceGitHub:
       "https://github.com/castellano17/Blackjack",
     enlaceNetlify: "https://blackjack-gray-omega.vercel.app/",
-    img: "/img/Blackjack.jpg",
+    img: "/img/Blackjack.png",
     categoria: "Front-End",
   },
   {
@@ -325,7 +325,7 @@ export const proyectosEn = [
     enlaceGitHub:
       "https://github.com/castellano17/Blackjack",
     enlaceNetlify: "https://blackjack-gray-omega.vercel.app/",
-    img: "/img/Blackjack.jpg",
+    img: "/img/Blackjack.png",
     categoria: "Front-End",
   },
   {
