@@ -40,7 +40,7 @@ const Feactured = ({ translations, frontEndTranslations }) => {
               className={`px-6 py-2 text-xs font-medium uppercase tracking-widest rounded-full transition-all ${
                 categoriaSeleccionada === cat.key
                   ? "bg-cyan-500 text-black"
-                  : "text-white/60 hover:text-white"
+                  : "text-primary/60 hover:text-primary"
               }`}
             >
               {cat.label}
@@ -52,7 +52,6 @@ const Feactured = ({ translations, frontEndTranslations }) => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {proyectosFiltrados.map((proyecto) => (
           <div key={proyecto.id} className="glass glass-highlight group flex flex-col rounded-3xl overflow-hidden">
-            {/* Image Stage */}
             <div className="relative aspect-video overflow-hidden">
               <img
                 src={proyecto.img}
@@ -65,12 +64,11 @@ const Feactured = ({ translations, frontEndTranslations }) => {
               </div>
             </div>
 
-            {/* Content Stage */}
             <div className="p-8 flex-grow flex flex-col">
               <div className="flex justify-between items-start mb-6">
                 <h4 className="text-2xl font-heading font-bold leading-none normal-case">{proyecto.titulo}</h4>
                 <div className="flex gap-3">
-                  <a href={proyecto.enlaceGitHub} target="_blank" rel="noreferrer" className="w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-white/10 transition-all">
+                  <a href={proyecto.enlaceGitHub} target="_blank" rel="noreferrer" className="w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-primary/10 transition-all">
                     <IconBrandGithub size={18} />
                   </a>
                   <a href={proyecto.enlaceNetlify} target="_blank" rel="noreferrer" className="w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-cyan-500 hover:text-black transition-all">
@@ -79,14 +77,14 @@ const Feactured = ({ translations, frontEndTranslations }) => {
                 </div>
               </div>
 
-              <p className="text-sm font-light mb-8 text-white/50 leading-relaxed">
+              <p className="text-sm font-light mb-8 text-primary/50 leading-relaxed">
                 {proyecto.descripcion}
               </p>
 
               <div className="mt-auto flex items-center justify-between">
                 <div className="flex flex-wrap gap-2">
                   {proyecto.tecnologias.split(',').map((tech, i) => (
-                    <span key={i} className="text-[10px] font-mono px-2 py-1 bg-white/5 rounded text-white/50 border border-white/5 uppercase">
+                    <span key={i} className="text-[10px] font-mono px-2 py-1 bg-primary/5 rounded text-primary/50 border border-primary/5 uppercase">
                       {tech.trim()}
                     </span>
                   ))}

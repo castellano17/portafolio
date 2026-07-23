@@ -15,9 +15,7 @@ export function useLocalStorage(key, defaultValue) {
       const resolved = typeof newValue === "function" ? newValue(prev) : newValue;
       try {
         window.localStorage.setItem(key, JSON.stringify(resolved));
-      } catch {
-        // ignore write errors (e.g. private browsing quota)
-      }
+      } catch {}
       return resolved;
     });
   };

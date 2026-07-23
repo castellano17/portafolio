@@ -66,7 +66,7 @@ export const proyectosES = [
     descripcion:
       " Tienda en línea, permite filtrar por categorías, agregar al carrito y visualizar detalles de cada producto",
     tecnologias:
-      "Teact JS, JavaScrit, Redux, axios, React-Router-dom, HTML y CSS",
+      "React JS, JavaScript, Redux, axios, React-Router-dom, HTML y CSS",
     enlaceGitHub: "https://github.com/castellano17/entregable6",
     enlaceNetlify: "https://entregable6-esmir.netlify.app",
     img: "/img/ecommerce.jpg",
@@ -133,7 +133,7 @@ export const proyectosES = [
     titulo: "Blackjack",
     descripcion:
       "Para prácticar JavaScript: array, funciones, uso de fórmulas.",
-    tecnologias: "JavaScript, CSS,HMTL",
+    tecnologias: "JavaScript, CSS, HTML",
     enlaceGitHub:
       "https://github.com/castellano17/Blackjack",
     enlaceNetlify: "https://blackjack-gray-omega.vercel.app/",
@@ -193,7 +193,7 @@ export const proyectosEn = [
     descripcion:
       "Application where you can plan your expenses, filter by categories, has a panel to visualize the available and spent amount.",
     tecnologias:
-      "React , Redux, axios, hook-form, redux, router-dom, consumo de API creada por mi, nodejs, sequielize, swagger, uuid, passport, jsonwebtoken ",
+      "React , Redux, axios, hook-form, redux, router-dom, consumption of API created by me, nodejs, sequielize, swagger, uuid, passport, jsonwebtoken ",
     enlaceGitHub:
       "https://docs.google.com/document/d/1LasmzHb4sSQidOyUDAPFiYFE1MUWLa1m0hhbNM3H2Aw/edit?usp=sharing",
     enlaceNetlify: "https://control-presupuesto-esmir.netlify.app/",
@@ -254,7 +254,7 @@ export const proyectosEn = [
     descripcion:
       "Online store, allows filtering by categories, adding to cart, and viewing details of each product",
     tecnologias:
-      "Teact JS, JavaScrit, Redux, axios, React-Router-dom, HTML y CSS",
+      "React JS, JavaScript, Redux, axios, React-Router-dom, HTML and CSS",
     enlaceGitHub: "https://github.com/castellano17/entregable6",
     enlaceNetlify: "https://entregable6-esmir.netlify.app",
     img: "/img/ecommerce.jpg",
@@ -265,7 +265,7 @@ export const proyectosEn = [
     titulo: "Users",
     descripcion: " Proyect",
     tecnologias:
-      "JavaScrit, axios, react-hook-form, Error validation, HTML y CSS, CRUD, methods HTTP ",
+      "JavaScript, axios, react-hook-form, error validation, HTML and CSS, CRUD, HTTP methods ",
     enlaceGitHub: "https://github.com/castellano17/entregable4",
     enlaceNetlify: "https://entregable4-esmir.netlify.app/",
     img: "/img/usuarios.jpg",
@@ -275,7 +275,7 @@ export const proyectosEn = [
     id: 8,
     titulo: "Memory Game",
     descripcion: " Memory game, developed in React and Tailwind CSS",
-    tecnologias: "React y Tailwind CSS",
+    tecnologias: "React and Tailwind CSS",
     enlaceGitHub: "https://github.com/castellano17/juegomemoria",
     enlaceNetlify: "https://memorygame-esmir.netlify.app/",
     img: "/img/memorygame.jpg",
@@ -297,7 +297,7 @@ export const proyectosEn = [
     descripcion:
       "Project designed to help you maintain effective control of your personal finances in a simple and efficient manner.",
     tecnologias:
-      "Next.js, Redux, axios, react-hook-form, validación de errores, HTML y CSS, CRUD ",
+      "Next.js, Redux, axios, react-hook-form, error validation, HTML and CSS, CRUD ",
     enlaceGitHub:
       "https://github.com/No-Country/c14-17-ft-node-react/tree/80f7972e25d3ab69055c218cae11e09b7bf7debf",
     enlaceNetlify: "https://no-country-1wexeud0b-castellano17.vercel.app/",
@@ -321,7 +321,7 @@ export const proyectosEn = [
     titulo: "Blackjack",
     descripcion:
       "To practice JavaScript: array, functions, use of formulas.",
-    tecnologias: "JavaScript, CSS,HMTL",
+    tecnologias: "JavaScript, CSS, HTML",
     enlaceGitHub:
       "https://github.com/castellano17/Blackjack",
     enlaceNetlify: "https://blackjack-gray-omega.vercel.app/",

@@ -1,6 +1,4 @@
 export const es = {
-  //navbar
-
   navbar: {
     menuOne: "Inicio",
     menuTwo: "Sobre mí",
@@ -13,22 +11,17 @@ export const es = {
       light: "Claro",
     },
   },
-  //home
-
   home: {
     greeting: "Hola! soy un",
     profession: "Desarrollador Web full-stack",
-    Iam: "Amante de mi profesión y especializado en el desarrollo web Fron-end y Back-end con estilos frescos y únicos. Actualmente me encuentro mejorando mis hablidades en Python para ampliar y mejorar mis competencias.",
-    status: "Sistema en línea // Arquitecto Full-Stack",
-    scroll: "Desplázate",
+    Iam: "Desarrollador Full-Stack especializado en Front-end y Back-end, enfocado en construir interfaces modernas y soluciones robustas con código limpio y escalable.",
+    status: "Full-Stack",
   },
-  //aboutMe
-
   aboutMe: {
     titleOne: "Sobre",
     titleTwo: "mi",
-    architect: "Arquitecto",
-    ofSystems: "de Sistemas.",
+    roleLabel: "Desarrollador",
+    roleHighlight: "Full-Stack.",
     paragraphOne:
       "Como un apasionado de la lectura, me atraen los desafíos y disfruto de la competencia sana en todas mis actividades. Creo firmemente que la búsqueda constante de la mejora en múltiples aspectos es clave para el éxito.",
     paragraphTwo:
@@ -44,7 +37,6 @@ export const es = {
       frontendLabel: "React, Next.js, Tailwind",
     },
 
-    //estudios
     studes: {
       one: "Mis",
       two: "estudios",
@@ -56,17 +48,24 @@ export const es = {
     button: "Descargar",
   },
 
-  //contact
   contact: {
     title: "Contacto",
-    protocol: "Protocolo: Contacto",
+    protocol: "Contacto",
     heading: "HABLEMOS.",
     base: "Ubicación",
-    location: "Managua, Nicaragua",
+    location: "Siuna, Nicaragua",
+    whatsappMessage: "¡Hola Esmir! Vi tu portafolio y me gustaría conversar sobre un proyecto.",
+    emailSubject: "Contacto desde tu portafolio",
+    emailBody: "¡Hola Esmir! Vi tu portafolio y me gustaría conversar sobre un proyecto.",
     success: {
       title: "MENSAJE ENVIADO.",
-      subtitle: "Recibirás una respuesta dentro de 24 horas.",
-      again: "Iniciar otra conversación",
+      subtitle: "Gracias por escribirme.",
+      again: "Enviar otro mensaje",
+    },
+    error: {
+      title: "NO SE PUDO ENVIAR.",
+      subtitle: "Intenta de nuevo o escríbeme directo a mi correo.",
+      retry: "Intentar de nuevo",
     },
     form: {
       title: "Escribeme",
@@ -77,10 +76,16 @@ export const es = {
       message: "Mensaje:",
       messagePlaceholder: "Cuéntame los detalles...",
       button: "Enviar",
+      sending: "Enviando...",
+      errors: {
+        nameRequired: "Tu nombre es requerido",
+        emailRequired: "Tu correo es requerido",
+        emailInvalid: "Ingresa un correo válido",
+        messageRequired: "Escribe un mensaje",
+      },
     },
   },
 
-  //projects
   project: {
     title: "Proyectos",
     heading: "Proyectos",
@@ -96,6 +101,5 @@ export const es = {
     role: "Rol Profesional",
   },
 
-  //footer
   footer: "Desarrollador Web Full-stack",
 };

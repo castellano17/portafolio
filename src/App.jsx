@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Layout/Navbar";
+import ScrollTopButton from "./components/Layout/ScrollTopButton";
 import About from "./Pages/About";
 import Home from "./Pages/Home";
 import Contact from "./Pages/Contact";
@@ -17,25 +18,19 @@ import Estudies from "./Pages/Estudies.jsx";
 import Lenis from "lenis";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { setLenis, scrollToSection } from "./util/lenis";
 
 gsap.registerPlugin(ScrollTrigger);
-
-import { scroller } from "react-scroll";
 
 function App() {
   const [theme, setTheme] = useLocalStorage("theme", "dark");
   const [language, setLanguage] = useState("es");
 
   useEffect(() => {
-    // Handle initial hash scroll
     const hash = window.location.hash.replace('#', '');
     if (hash) {
       setTimeout(() => {
-        scroller.scrollTo(hash, {
-          duration: 1000,
-          smooth: true,
-          offset: -100
-        });
+        scrollToSection('#' + hash);
       }, 500);
     }
   }, []);
@@ -46,6 +41,7 @@ function App() {
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
     });
+    setLenis(lenis);
 
     function raf(time) {
       lenis.raf(time);
@@ -60,6 +56,7 @@ function App() {
     });
 
     return () => {
+      setLenis(null);
       lenis.destroy();
     };
   }, []);
@@ -84,6 +81,7 @@ function App() {
   return (
     <div className="min-h-screen bg-background text-primary selection:bg-accent selection:text-background grid-bg transition-colors duration-700">
       <Navbar
+        theme={theme}
         switchTheme={switchTheme}
         handleLanguageToggle={handleLanguageToggle}
         translations={translations}
@@ -106,6 +104,7 @@ function App() {
           />
         </Routes>
       </main>
+      <ScrollTopButton />
     </div>
   );
 }

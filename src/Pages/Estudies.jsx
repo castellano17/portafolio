@@ -21,7 +21,7 @@ const Estudies = ({ translations, studiesTranslations }) => {
           </div>
         </div>
 
-        <p className="text-sm font-light text-white/50 mb-10 leading-relaxed min-h-[60px]">
+        <p className="text-sm font-light text-primary/50 mb-10 leading-relaxed min-h-[60px]">
           {studie.description}
         </p>
 
@@ -50,7 +50,7 @@ const Estudies = ({ translations, studiesTranslations }) => {
             </span>
           </h3>
         </div>
-        <div className="md:col-span-5 md:text-right font-mono text-white/40 uppercase tracking-widest text-xs">
+        <div className="md:col-span-5 md:text-right font-mono text-primary/40 uppercase tracking-widest text-xs">
           {translations.aboutMe.studes.subtitle}
         </div>
       </div>

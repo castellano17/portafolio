@@ -85,7 +85,7 @@ export const experienceEn = [
   },
   {
     id: 4,
-    titulo: "Desarrollador de app web en ACADEMLO",
+    titulo: "Web App Developer at ACADEMLO",
     descripcion:
       "During my training at ACADEMLO, I gained experience in developing a wide variety of web applications, utilizing the latest technologies available. This journey allowed me to strengthen my skills and knowledge, tackling diverse challenges and gaining a comprehensive perspective in designing and implementing innovative solutions.",
     tecnologias:

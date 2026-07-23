@@ -1,31 +1,27 @@
 export const en = {
-  //navbar
   navbar: {
     menuOne: "Home",
     menuTwo: "About Me",
     menuThree: "Projects",
     menuFour: "Experience",
-    menuFive: "Estudies",
+    menuFive: "Studies",
     menuSix: "Contact",
     themes: {
       dark: "Dark",
       light: "Light",
     },
   },
-  //home
   home: {
     greeting: "Hello! I am a ",
     profession: "Full-stack web developer",
-    Iam: "Passionate about my profession and specialized in Front-end and Back-end web development with fresh and unique styles. Currently, I am enhancing my skills in Python to expand and improve my capabilities.",
-    status: "System Online // Fullstack Architect",
-    scroll: "Initialize Scroll",
+    Iam: "Full-Stack Developer specialized in Front-end and Back-end, focused on building modern interfaces and robust solutions with clean, scalable code.",
+    status: "Full-Stack",
   },
-  //aboutMe
   aboutMe: {
     titleOne: "About",
     titleTwo: "me",
-    architect: "Architect",
-    ofSystems: "of Systems.",
+    roleLabel: "",
+    roleHighlight: "Full-Stack Developer.",
     paragraphOne:
       " As a passionate reader, I am drawn to challenges and enjoy healthy competition in all my activities. I firmly believe that the constant pursuit of improvement in multiple aspects is key to success.",
     paragraphTwo:
@@ -40,7 +36,6 @@ export const en = {
       frontend: "Frontend",
       frontendLabel: "React, Next.js, Tailwind",
     },
-    //estudios
     studes: {
       one: "My",
       two: "studies",
@@ -49,20 +44,27 @@ export const en = {
       background: "Academic Background",
       credentials: "Credentials",
     },
-    button: "Donwload",
+    button: "Download",
   },
 
-  //contact
   contact: {
     title: "Contact",
-    protocol: "Protocol: Contact",
+    protocol: "Contact",
     heading: "LET'S TALK.",
     base: "Base",
-    location: "Managua, Nicaragua",
+    location: "Siuna, Nicaragua",
+    whatsappMessage: "Hi Esmir! I saw your portfolio and would like to talk about a project.",
+    emailSubject: "Contact from your portfolio",
+    emailBody: "Hi Esmir! I saw your portfolio and would like to talk about a project.",
     success: {
-      title: "MESSAGE TRANSMITTED.",
-      subtitle: "Expect a response within 24 hours.",
-      again: "Establish another connection",
+      title: "MESSAGE SENT.",
+      subtitle: "Thanks for reaching out.",
+      again: "Send another message",
+    },
+    error: {
+      title: "COULDN'T SEND IT.",
+      subtitle: "Try again or email me directly.",
+      retry: "Try again",
     },
     form: {
       title: "Message me",
@@ -73,12 +75,18 @@ export const en = {
       message: "Message:",
       messagePlaceholder: "Transmission details...",
       button: "Send",
+      sending: "Sending...",
+      errors: {
+        nameRequired: "Your name is required",
+        emailRequired: "Your email is required",
+        emailInvalid: "Enter a valid email",
+        messageRequired: "Write a message",
+      },
     },
   },
 
-  //projects
   project: {
-    title: "Proyects",
+    title: "Projects",
     heading: "System",
     headingHighlight: "Outputs.",
     all: "All",
@@ -92,6 +100,5 @@ export const en = {
     role: "Professional Role",
   },
 
-  //footer
   footer: "Full-stack Web Developer",
 };
