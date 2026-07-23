@@ -5,9 +5,10 @@ import Feactured from "./Feactured";
 import Estudies from "./Estudies";
 import Footer from "./Footer";
 import Experience from "./Experience";
-import { IconBrandGithub, IconBrandLinkedin, IconArrowDown } from "@tabler/icons-react";
+import { IconBrandGithub, IconBrandLinkedin, IconArrowDown, IconId } from "@tabler/icons-react";
 import gsap from "gsap";
 import { scrollToSection } from "../util/lenis";
+import { DIGITAL_CARD_URL, GITHUB_URL, LINKEDIN_URL } from "../util/links";
 
 const Home = ({
   translations,
@@ -90,11 +91,14 @@ const Home = ({
           </div>
 
           <div className="flex gap-4 mt-6">
-            <a href="https://github.com/castellano17" target="_blank" rel="noreferrer" className="w-12 h-12 glass rounded-full flex items-center justify-center hover:bg-cyan-500 hover:text-black transition-all">
+            <a href={GITHUB_URL} target="_blank" rel="noreferrer" className="w-12 h-12 glass rounded-full flex items-center justify-center hover:bg-cyan-500 hover:text-black transition-all">
               <IconBrandGithub size={22} />
             </a>
-            <a href="https://www.linkedin.com/in/esmir-roque/" target="_blank" rel="noreferrer" className="w-12 h-12 glass rounded-full flex items-center justify-center hover:bg-cyan-500 hover:text-black transition-all">
+            <a href={LINKEDIN_URL} target="_blank" rel="noreferrer" className="w-12 h-12 glass rounded-full flex items-center justify-center hover:bg-cyan-500 hover:text-black transition-all">
               <IconBrandLinkedin size={22} />
+            </a>
+            <a href={DIGITAL_CARD_URL} target="_blank" rel="noreferrer" className="w-12 h-12 glass rounded-full flex items-center justify-center hover:bg-cyan-500 hover:text-black transition-all">
+              <IconId size={22} />
             </a>
           </div>
         </div>

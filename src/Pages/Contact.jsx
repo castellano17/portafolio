@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { IconMail, IconBrandWhatsapp, IconSend, IconAlertTriangle, IconId, IconArrowUpRight } from "@tabler/icons-react";
+import { DIGITAL_CARD_URL } from "../util/links";
 
 const FORM_ENDPOINT = "https://formsubmit.co/ajax/e3ed59455143d2ead7e46b3282428262";
 const WHATSAPP_NUMBER = "50586498505";
 const CONTACT_EMAIL = "castellano17@gmail.com";
-const DIGITAL_CARD_URL = "https://vinkard.com/vinkard/esmir";
 
 const Contact = ({ translations }) => {
   const [status, setStatus] = useState("idle");

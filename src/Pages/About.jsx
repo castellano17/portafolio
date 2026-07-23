@@ -1,6 +1,7 @@
 import React from "react";
 import { skills } from "../util/Skills";
-import { IconArrowRight, IconBrandGithub, IconBrandLinkedin, IconDownload } from "@tabler/icons-react";
+import { IconArrowRight, IconBrandGithub, IconBrandLinkedin, IconDownload, IconId } from "@tabler/icons-react";
+import { DIGITAL_CARD_URL, GITHUB_URL, LINKEDIN_URL } from "../util/links";
 
 const About = ({ translations, language }) => {
   return (
@@ -45,11 +46,14 @@ const About = ({ translations, language }) => {
               <IconDownload size={18} className="group-hover:translate-y-1 transition-transform" />
             </a>
             <div className="flex items-center gap-4 px-6 py-4 text-primary/40">
-              <a href="https://github.com/castellano17" target="_blank" rel="noreferrer" className="hover:text-cyan-400 transition-colors">
+              <a href={GITHUB_URL} target="_blank" rel="noreferrer" className="hover:text-cyan-400 transition-colors">
                 <IconBrandGithub size={24} />
               </a>
-              <a href="https://www.linkedin.com/in/esmir-roque/" target="_blank" rel="noreferrer" className="hover:text-cyan-400 transition-colors">
+              <a href={LINKEDIN_URL} target="_blank" rel="noreferrer" className="hover:text-cyan-400 transition-colors">
                 <IconBrandLinkedin size={24} />
+              </a>
+              <a href={DIGITAL_CARD_URL} target="_blank" rel="noreferrer" className="hover:text-cyan-400 transition-colors">
+                <IconId size={24} />
               </a>
             </div>
           </div>
