@@ -1,73 +1,97 @@
-:root {
-  --primary: #232532;
-  --secondary: #303646;
-  --tertiary: #0d6ca0;
-  --white: #dde0e5;
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Fira+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
+@import "tailwindcss";
 
-  --fuentePrincipal: "Rubik", sans-serif;
+@theme {
+  --color-background: #010B13;
+  --color-primary: #F8F8FF;
+  --color-accent: #00FFFF;
+
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-body: "Fira Sans", sans-serif;
 }
 
-[data-theme="light"] {
-  --primary: #f8f8f8;
-  --secondary: #cccccc;
-  --tertiary: #6ab6d9;
-  --white: #444444;
-  --white2: #dde0e5;
+@layer base {
+  :root {
+    --background: 1 11 19;
+    --primary: 248 248 255;
+    --accent: 0 255 255;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-primary);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    line-height: 0.9;
+  }
 }
 
-body {
-  margin: 0;
-  color: var(--white);
-  font-family: "Rubik", sans-serif;
-  background-color: var(--primary);
-  transition: background-color 0.7s ease;
+@layer components {
+  .glass {
+    background: rgba(248, 248, 255, 0.03);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(248, 248, 255, 0.08);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
+
+  .glass-highlight {
+    position: relative;
+    overflow: hidden;
+  }
+  .glass-highlight::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.3), transparent);
+  }
+
+  .btn-glow {
+    @apply px-8 py-4 bg-accent text-background font-bold uppercase tracking-widest rounded-xl transition-all hover:bg-cyan-400;
+  }
+
+  .marquee-text {
+    @apply text-[10vw] font-heading leading-none whitespace-nowrap opacity-10;
+    -webkit-text-stroke: 1px var(--color-primary);
+    color: transparent;
+  }
 }
 
-html {
-  box-sizing: border-box;
-  color: var(--white);
-}
-*,
-*::after,
-*::before {
-  box-sizing: inherit;
+/* Custom Utilities */
+@utility grid-bg {
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, rgba(248, 248, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(248, 248, 255, 0.02) 1px, transparent 1px);
 }
 
-img {
-  max-width: 100%;
+.orbit-container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+.orbit-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-}
-
-p {
-  margin: 0;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-img {
-  max-width: 100%;
-}
-
-a {
-  color: var(--white);
-  font-size: 25px;
-  text-decoration: none;
-}
-
-/* .shadowBg {
-  -webkit-box-shadow: inset 0px 0px 9px 0px rgba(0, 0, 0, 1);
-  -moz-box-shadow: inset 0px 0px 9px 0px rgba(0, 0, 0, 1);
-  box-shadow: inset 0px 0px 9px 0px rgba(0, 0, 0, 1);
-} */
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-background); }
+::-webkit-scrollbar-thumb { background: rgba(0, 255, 255, 0.2); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-accent); }

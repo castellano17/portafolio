@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import About from "./About";
 import Contact from "./Contact";
 import Feactured from "./Feactured";
 import Estudies from "./Estudies";
 import Footer from "./Footer";
-import "./styles/Home.css";
 import Experience from "./Experience";
+import { IconBrandGithub, IconBrandLinkedin } from "@tabler/icons-react";
+import gsap from "gsap";
 
 const Home = ({
   translations,
@@ -14,65 +15,125 @@ const Home = ({
   experienceTranslations,
   language,
 }) => {
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(".hero-title-line", {
+        y: 100,
+        opacity: 0,
+        duration: 1.2,
+        stagger: 0.2,
+        ease: "power4.out",
+      });
+
+      gsap.from(".hero-card", {
+        scale: 0.8,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+        delay: 0.6,
+      });
+    }, containerRef);
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <>
-      <header id="home" className="header__home">
-        <div className="header__home-left">
-          <div className="home__logo">
-            <img src="/logocode.png" alt="Logo header" />
+    <div ref={containerRef}>
+      {/* Hero Section */}
+      <section
+        id="home"
+        className="relative min-h-screen flex flex-col items-center justify-center px-6 pt-32 pb-24 overflow-hidden"
+      >
+        <div className="absolute inset-0 z-0 opacity-40">
+          <div className="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-[radial-gradient(circle,_rgba(0,255,255,0.15)_0%,_transparent_70%)] blur-[100px]" />
+          <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-[radial-gradient(circle,_rgba(0,255,255,0.1)_0%,_transparent_70%)] blur-[100px]" />
+        </div>
+
+        <div className="relative z-10 flex flex-col items-center text-center max-w-4xl">
+          <div className="mb-6 flex items-center gap-2 px-4 py-1.5 glass rounded-full">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500" />
+            </span>
+            <span className="text-xs font-mono uppercase tracking-[0.2em] text-cyan-400">
+              {translations.home.status}
+            </span>
           </div>
-          <h1>
-            Esmir
-            <br />
-            Roque.
+
+          <h1 className="font-heading text-6xl md:text-8xl font-bold tracking-tight mb-8 leading-[0.9]">
+            <div className="hero-title-line overflow-hidden text-white/90">ESMIR</div>
+            <div className="hero-title-line overflow-hidden text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-cyan-700">
+              ROQUE.
+            </div>
           </h1>
 
-          <div></div>
-          <div className="icon-social">
-            <a href="https://www.linkedin.com/in/esmir-roque/" target="_blank">
-              <img src="/linkedin-logo-240.png" alt="Linkedin Social Media" />
-            </a>
-            <a href="https://github.com/castellano17" target="_blank">
-              <img src="/github-logo-240.png" alt="Github Repository" />
-            </a>
+          <p className="text-lg md:text-xl text-white/60 font-light max-w-2xl mb-12 leading-relaxed">
+            {translations.home.Iam}
+          </p>
 
-            <a
-              href="https://wa.me/50586498505?text=Hola,%20estoy%20interesado%20en%20tu%20perfil"
-              target="_blank"
-              className="whatsapp-button"
-            >
-              <i className="bx bxl-whatsapp"></i>
+          <div className="hero-card glass p-1 rounded-xl w-full max-w-lg mx-auto shadow-2xl -rotate-1">
+            <div className="bg-black/40 rounded-lg p-6 font-mono text-sm text-left border border-white/5">
+              <div className="flex gap-1.5 mb-4">
+                <div className="w-2.5 h-2.5 rounded-full bg-red-500/50" />
+                <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/50" />
+                <div className="w-2.5 h-2.5 rounded-full bg-green-500/50" />
+              </div>
+              <div className="space-y-1">
+                <p><span className="text-pink-500">const</span> architect = {"{"}</p>
+                <p className="pl-4">name: <span className="text-yellow-400">'Esmir Roque'</span>,</p>
+                <p className="pl-4">role: <span className="text-yellow-400">'Fullstack Web Developer'</span>,</p>
+                <p className="pl-4">backend: [<span className="text-cyan-400">'Node.js'</span>, <span className="text-cyan-400">'PostgreSQL'</span>, <span className="text-cyan-400">'Python'</span>],</p>
+                <p className="pl-4">frontend: [<span className="text-cyan-400">'React'</span>, <span className="text-cyan-400">'Next.js'</span>, <span className="text-cyan-400">'Tailwind'</span>]</p>
+                <p>{"};"}</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex gap-4 mt-10">
+            <a href="https://github.com/castellano17" target="_blank" rel="noreferrer" className="w-12 h-12 glass rounded-full flex items-center justify-center hover:bg-cyan-500 hover:text-black transition-all">
+              <IconBrandGithub size={22} />
+            </a>
+            <a href="https://www.linkedin.com/in/esmir-roque/" target="_blank" rel="noreferrer" className="w-12 h-12 glass rounded-full flex items-center justify-center hover:bg-cyan-500 hover:text-black transition-all">
+              <IconBrandLinkedin size={22} />
             </a>
           </div>
         </div>
 
-        <div className="header__home-right">
-          <p className="header__intro">{translations.home.greeting}</p>
-          <h2 className="header__title">{translations.home.profession}</h2>
-          <p className="header__home-description">{translations.home.Iam}</p>
+        <div className="hidden md:flex mt-16 flex-col items-center gap-2 opacity-50">
+          <div className="w-[1px] h-12 bg-gradient-to-b from-cyan-500 to-transparent" />
+          <span className="text-[10px] font-mono tracking-[0.3em] uppercase">{translations.home.scroll}</span>
         </div>
-      </header>
+      </section>
 
-      <About
-        translations={translations}
-        studiesTranslations={studiesTranslations}
-        language={language}
-      />
-      <Feactured
-        translations={translations}
-        frontEndTranslations={frontEndTranslations}
-      />
-      <Experience
-        translations={translations}
-        experienceTranslations={experienceTranslations}
-      />
-      <Estudies
-        translations={translations}
-        studiesTranslations={studiesTranslations}
-      />
-      <Contact translations={translations} />
+      {/* Content Sections */}
+      <div className="max-w-7xl mx-auto px-6">
+        <About
+          translations={translations}
+          studiesTranslations={studiesTranslations}
+          language={language}
+        />
+
+        <Feactured
+          translations={translations}
+          frontEndTranslations={frontEndTranslations}
+        />
+
+        <Experience
+          translations={translations}
+          experienceTranslations={experienceTranslations}
+        />
+
+        <Estudies
+          translations={translations}
+          studiesTranslations={studiesTranslations}
+        />
+
+        <Contact translations={translations} />
+      </div>
+
       <Footer translations={translations} />
-    </>
+    </div>
   );
 };
 export default Home;

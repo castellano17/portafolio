@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link as RouterLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
-import "./styles/Navbar.css";
-import useLocalStorage from "use-local-storage";
+import { IconSun, IconMoon, IconWorld, IconMenu2, IconX } from "@tabler/icons-react";
 
 const Navbar = ({
   switchTheme,
@@ -11,192 +10,101 @@ const Navbar = ({
   language,
 }) => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [theme] = useLocalStorage("theme", "dark");
 
-  const handleMenuOpen = () => {
-    setMenuOpen(!menuOpen);
-  };
+  const handleMenuOpen = () => setMenuOpen(!menuOpen);
+  const handleCloseMenu = () => setMenuOpen(false);
 
-  const handleCloseMenu = () => {
-    setMenuOpen(false);
-  };
-
-  // Obtener el texto del tema traducido según el idioma actual
-  const themeText =
-    language === "es"
-      ? translations.navbar.themes[theme]
-      : translations.navbar.themes[theme];
+  const navLinks = [
+    { to: "home", label: translations.navbar.menuOne },
+    { to: "about", label: translations.navbar.menuTwo },
+    { to: "projects", label: translations.navbar.menuThree },
+    { to: "experience", label: translations.navbar.menuFour },
+    { to: "estudies", label: translations.navbar.menuFive },
+    { to: "contact", label: translations.navbar.menuSix },
+  ];
 
   return (
-    <div className="navbar__container ">
-      <nav className="navbar ">
-        <div>
-          <div>
-            {/* Link principal */}
-            <RouterLink to="/">
-              <img className="logo" src="/logoEsmir.png" />
-            </RouterLink>
-          </div>
+    <nav className="fixed top-0 left-0 right-0 z-50 flex justify-center py-6 px-4">
+      <div className="glass glass-highlight px-6 py-3 rounded-full flex items-center gap-6 lg:gap-10 max-w-full">
+        <RouterLink to="/" className="flex items-center gap-2 shrink-0">
+          <span className="font-heading font-bold text-xl tracking-tighter text-accent">ESMIR.ME</span>
+        </RouterLink>
+
+        {/* Desktop Menu */}
+        <div className="hidden lg:flex items-center gap-8 text-sm font-medium tracking-wide text-white/70">
+          {navLinks.map((link) => (
+            <ScrollLink
+              key={link.to}
+              to={link.to}
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+              className="hover:text-accent transition-colors cursor-pointer"
+            >
+              {link.label}
+            </ScrollLink>
+          ))}
         </div>
 
-        {/* Menú horizontal */}
-        <div className="navbar__link-horizontal">
-          <div className="navbar__link-horizontal">
-            <ScrollLink
-              to="home"
-              spy={true}
-              smooth={true}
-              offset={-150}
-              duration={500}
-              className="scroll-link"
-            >
-              {translations.navbar.menuOne}
-            </ScrollLink>
-          </div>
-          <div className="navbar__link-horizontal">
-            <ScrollLink
-              to="about"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-              className="scroll-link"
-            >
-              {translations.navbar.menuTwo}
-            </ScrollLink>
-          </div>
-          <div className="navbar__link-horizontal">
-            <ScrollLink
-              to="feactured"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-              className="scroll-link"
-            >
-              {translations.navbar.menuThree}
-            </ScrollLink>
-          </div>
-          <div className="navbar__link-horizontal">
-            <ScrollLink
-              to="experience"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-              className="scroll-link"
-            >
-              {translations.navbar.menuFour}
-            </ScrollLink>
-          </div>
-          <div className="navbar__link-horizontal">
-            <ScrollLink
-              to="estudies"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-              className="scroll-link"
-            >
-              {translations.navbar.menuFive}
-            </ScrollLink>
-          </div>
-
-          <div className="navbar__link-horizontal">
-            <ScrollLink
-              to="contact"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-              className="scroll-link"
-            >
-              {translations.navbar.menuSix}
-            </ScrollLink>
-          </div>
-        </div>
-
-        <div>
-          <i
+        <div className="flex items-center gap-4">
+          <button
             onClick={switchTheme}
-            className="theme-toggle bx bx-toggle-right"
-          ></i>
-          <h3 className="text-toggle">{themeText}</h3>
-        </div>
-
-        {/* Agregar el botón de traducción */}
-        <div
-          onClick={handleLanguageToggle}
-          className="translate-icon"
-          title={language === "es" ? "Traducir" : "Translate"}
-        >
-          <i className="bx bx-globe"></i>
-          {language === "es" ? " ES" : " EN"}
-        </div>
-
-        {/* botón del menú hamburguesa*/}
-        <div
-          className="navbar__menu-hamburguesa-buttom"
-          onClick={handleMenuOpen}
-        >
-          <i className="bx bx-menu "></i>
-        </div>
-
-        <div onClick={handleCloseMenu}></div>
-
-        <div className={`navbar__menu ${menuOpen ? "active" : ""}`}>
-          <div>
-            <button className="navbar__close" onClick={handleCloseMenu}>
-              <i className="bx bx-x"></i>
-            </button>
-            <div onClick={handleCloseMenu}>
-              <RouterLink to="/">{translations.navbar.menuOne}</RouterLink>
-            </div>
-            <div className="" onClick={handleCloseMenu}>
-              <RouterLink to="/about">{translations.navbar.menuTwo}</RouterLink>
-            </div>
-            <div className="" onClick={handleCloseMenu}>
-              <RouterLink to="/feactured">
-                {translations.navbar.menuThree}
-              </RouterLink>
-            </div>
-            <div className="" onClick={handleCloseMenu}>
-              <RouterLink to="/experience">
-                {translations.navbar.menuFour}
-              </RouterLink>
-            </div>
-            <div className="" onClick={handleCloseMenu}>
-              <RouterLink to="/estudies">
-                {translations.navbar.menuFive}
-              </RouterLink>
-            </div>
-            <div className="" onClick={handleCloseMenu}>
-              <RouterLink to="/contact">
-                {translations.navbar.menuSix}
-              </RouterLink>
-            </div>
-          </div>
-
-          <div>
-            <i
-              onClick={switchTheme}
-              className="theme-toggle2 bx bx-toggle-right"
-            ></i>
-            <h3 className="text-toggle2">{themeText}</h3>
-          </div>
-
-          {/* Agregar el botón de traducción */}
-          <div
-            onClick={handleLanguageToggle}
-            className="translate-icon2"
-            title={language === "es" ? "Traducir" : "Translate"}
+            className="text-lg text-white/50 hover:text-white transition-colors"
+            title="Toggle Theme"
           >
-            <i className="bx bx-globe"></i>
-            {language === "es" ? " ES" : " EN"}
-          </div>
+            <IconSun className="w-5 h-5 dark:block hidden" />
+            <IconMoon className="w-5 h-5 block dark:hidden" />
+          </button>
+
+          <div className="h-4 w-px bg-white/10" />
+
+          <button
+            onClick={handleLanguageToggle}
+            className="flex items-center gap-1 text-xs font-mono uppercase tracking-widest text-white/50 hover:text-accent transition-colors"
+          >
+            <IconWorld size={16} />
+            {language.toUpperCase()}
+          </button>
+
+          <button
+            className="lg:hidden text-white/70 hover:text-accent transition-colors"
+            onClick={handleMenuOpen}
+          >
+            <IconMenu2 className="w-6 h-6" />
+          </button>
         </div>
-      </nav>
-    </div>
+      </div>
+
+      {/* Mobile Menu */}
+      <div className={`fixed inset-0 bg-background z-[60] flex flex-col p-8 transition-all duration-500 lg:hidden ${
+        menuOpen ? "translate-y-0" : "-translate-y-full"
+      }`}>
+        <div className="flex justify-between items-center mb-16">
+          <span className="font-heading font-bold text-2xl tracking-tighter text-accent">ESMIR.ME</span>
+          <button onClick={handleCloseMenu} className="glass p-2 rounded-xl">
+            <IconX className="w-8 h-8 text-accent" />
+          </button>
+        </div>
+
+        <div className="flex flex-col gap-8">
+          {navLinks.map((link) => (
+            <ScrollLink
+              key={link.to}
+              to={link.to}
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+              onClick={handleCloseMenu}
+              className="text-4xl font-heading font-bold hover:text-accent transition-colors"
+            >
+              {link.label}
+            </ScrollLink>
+          ))}
+        </div>
+      </div>
+    </nav>
   );
 };
 

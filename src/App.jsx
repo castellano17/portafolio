@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Layout/Navbar";
@@ -5,8 +6,7 @@ import About from "./Pages/About";
 import Home from "./Pages/Home";
 import Contact from "./Pages/Contact";
 import Feactured from "./Pages/Feactured";
-import useLocalStorage from "use-local-storage";
-import { useEffect, useState } from "react";
+import { useLocalStorage } from "./util/useLocalStorage";
 import { en } from "./translations/en.js";
 import { es } from "./translations/es.js";
 import { studiesEN, studiesEs } from "./util/studies";
@@ -14,104 +14,98 @@ import { proyectosES, proyectosEn } from "./util/FrontEnd";
 import { experienceEn, experienceEs } from "./util/Experience.js";
 import Experience from "./Pages/Experience.jsx";
 import Estudies from "./Pages/Estudies.jsx";
+import Lenis from "lenis";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
+import { scroller } from "react-scroll";
 
 function App() {
   const [theme, setTheme] = useLocalStorage("theme", "dark");
-  const [language, setLanguage] = useState("es"); // Estado del idioma actual
+  const [language, setLanguage] = useState("es");
 
-  const switchTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
-  };
-
-  const handleLanguageToggle = () => {
-    if (language === "es") {
-      setLanguage("en");
-    } else {
-      setLanguage("es");
+  useEffect(() => {
+    // Handle initial hash scroll
+    const hash = window.location.hash.replace('#', '');
+    if (hash) {
+      setTimeout(() => {
+        scroller.scrollTo(hash, {
+          duration: 1000,
+          smooth: true,
+          offset: -100
+        });
+      }, 500);
     }
-  };
+  }, []);
 
-  const translations = language === "es" ? es : en; // Obtiene las traducciones según el idioma actual
-  const studiesTranslations = language === "es" ? studiesEs : studiesEN; // Obtiene las traducciones de "studies" según el idioma actual
-  const frontEndTranslations = language === "es" ? proyectosES : proyectosEn; // Obtienes las traducciones de "FrontEnd" según el idioma actual
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true,
+    });
 
-  const experienceTranslations =
-    language === "es" ? experienceEs : experienceEn; // Obtienes las traducciones de "Experience" según el idioma actual
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+    lenis.on('scroll', ScrollTrigger.update);
+
+    gsap.ticker.add((time)=>{
+      lenis.raf(time * 1000)
+    });
+
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
+
+  const switchTheme = () => setTheme(theme === "light" ? "dark" : "light");
+  const handleLanguageToggle = () => setLanguage(prev => (prev === "es" ? "en" : "es"));
+
+  const translations = language === "es" ? es : en;
+  const studiesTranslations = language === "es" ? studiesEs : studiesEN;
+  const frontEndTranslations = language === "es" ? proyectosES : proyectosEn;
+  const experienceTranslations = language === "es" ? experienceEs : experienceEn;
 
   useEffect(() => {
     document.body.dataset.theme = theme;
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
   }, [theme]);
 
   return (
-    <div className="App" data-theme={theme}>
+    <div className="min-h-screen bg-background text-primary selection:bg-accent selection:text-background grid-bg transition-colors duration-700">
       <Navbar
         switchTheme={switchTheme}
         handleLanguageToggle={handleLanguageToggle}
         translations={translations}
         language={language}
       />
-      <div>
-        {/* <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/feactured">Feactured</Link>
-        <Link to="/contact">Contact</Link> */}
-      </div>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <Home
-              translations={translations}
-              studiesTranslations={studiesTranslations}
-              frontEndTranslations={frontEndTranslations}
-              language={language}
-              experienceTranslations={experienceTranslations}
-            />
-          }
-        />
-        <Route
-          path="/about"
-          element={
-            <About
-              translations={translations}
-              studiesTranslations={studiesTranslations}
-              language={language}
-            />
-          }
-        />
-        <Route
-          path="/feactured"
-          element={
-            <Feactured
-              translations={translations}
-              frontEndTranslations={frontEndTranslations}
-            />
-          }
-        />
-        <Route
-          path="/experience"
-          element={
-            <Experience
-              translations={translations}
-              experienceTranslations={experienceTranslations}
-            />
-          }
-        />
-        <Route
-          path="/estudies"
-          element={
-            <Estudies
-              translations={translations}
-              studiesTranslations={studiesTranslations}
-            />
-          }
-        />
-        <Route
-          path="/contact"
-          element={<Contact translations={translations} />}
-        />
-      </Routes>
+      
+      <main className="relative z-10 pt-24">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Home
+                translations={translations}
+                studiesTranslations={studiesTranslations}
+                frontEndTranslations={frontEndTranslations}
+                language={language}
+                experienceTranslations={experienceTranslations}
+              />
+            }
+          />
+        </Routes>
+      </main>
     </div>
   );
 }

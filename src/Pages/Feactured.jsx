@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useMemo, memo } from "react";
-import "./styles/Feactured.css";
+import { IconBrandGithub, IconExternalLink, IconTrendingUp } from "@tabler/icons-react";
 
 const Feactured = ({ translations, frontEndTranslations }) => {
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState("all");
@@ -17,73 +17,87 @@ const Feactured = ({ translations, frontEndTranslations }) => {
   }, [categoriaSeleccionada, frontEndTranslations]);
 
   return (
-    <div id="feactured" className="feactured">
-      <h3>{translations.project.title}</h3>
+    <section id="projects" className="py-32">
+      <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-16 gap-10">
+        <div>
+          <h2 className="font-heading text-sm uppercase tracking-[0.3em] text-cyan-500 mb-4">
+            {translations.project.title}
+          </h2>
+          <h3 className="font-heading text-4xl md:text-5xl font-bold">
+            {translations.project.heading} <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-cyan-700">{translations.project.headingHighlight}</span>
+          </h3>
+        </div>
 
-      <div className="portfolio-filter">
-        <button
-          type="button"
-          className={categoriaSeleccionada === "all" ? "active" : ""}
-          onClick={() => handleFilter("all")}
-        >
-          Todos
-        </button>
-        <button
-          type="button"
-          className={categoriaSeleccionada === "Front-End" ? "active" : ""}
-          onClick={() => handleFilter("Front-End")}
-        >
-          Front-End
-        </button>
-        <button
-          type="button"
-          className={categoriaSeleccionada === "Back-End" ? "active" : ""}
-          onClick={() => handleFilter("Back-End")}
-        >
-          Back-End
-        </button>
+        <div className="flex gap-2 glass p-2 rounded-full">
+          {[
+            { key: "all", label: translations.project.all },
+            { key: "Front-End", label: translations.project.frontend },
+            { key: "Back-End", label: translations.project.backend },
+          ].map((cat) => (
+            <button
+              key={cat.key}
+              onClick={() => handleFilter(cat.key)}
+              className={`px-6 py-2 text-xs font-medium uppercase tracking-widest rounded-full transition-all ${
+                categoriaSeleccionada === cat.key
+                  ? "bg-cyan-500 text-black"
+                  : "text-white/60 hover:text-white"
+              }`}
+            >
+              {cat.label}
+            </button>
+          ))}
+        </div>
       </div>
 
-      <div className="feactured__container-card">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {proyectosFiltrados.map((proyecto) => (
-          <div key={proyecto.id} className="contenedor">
-            <div className="glass">
-              <h2 className="feactured__glass-title">
-                <b>{proyecto.titulo}</b>
-              </h2>
-              <h2 className="feactured__glass-description">
-                {proyecto.descripcion}
-              </h2>
-              <p className="feactured__glass-tecno">
-                <b>{proyecto.tecnologias}</b>
-              </p>
-              <div className="contenido">
-                <a
-                  href={proyecto.enlaceGitHub}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="feactured__glass-contenido"
-                >
-                  <i className="feactured-icon bx bxl-github"></i>
-                </a>
-                <a
-                  href={proyecto.enlaceNetlify}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="feactured__glass-contenido"
-                >
-                  <i className="feactured-icon bx bx-link-external"></i>
-                </a>
+          <div key={proyecto.id} className="glass glass-highlight group flex flex-col rounded-3xl overflow-hidden">
+            {/* Image Stage */}
+            <div className="relative aspect-video overflow-hidden">
+              <img
+                src={proyecto.img}
+                alt={proyecto.titulo}
+                className="w-full h-full object-cover opacity-60 group-hover:scale-105 group-hover:opacity-80 transition-all duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
+              <div className="absolute top-4 left-4 text-[10px] font-mono px-2 py-0.5 bg-cyan-500/20 text-cyan-400 rounded border border-cyan-500/30 uppercase">
+                {proyecto.categoria}
               </div>
             </div>
 
-            <div className="imagen">
-              <img src={proyecto.img} alt={proyecto.titulo} loading="lazy" />
+            {/* Content Stage */}
+            <div className="p-8 flex-grow flex flex-col">
+              <div className="flex justify-between items-start mb-6">
+                <h4 className="text-2xl font-heading font-bold leading-none normal-case">{proyecto.titulo}</h4>
+                <div className="flex gap-3">
+                  <a href={proyecto.enlaceGitHub} target="_blank" rel="noreferrer" className="w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-white/10 transition-all">
+                    <IconBrandGithub size={18} />
+                  </a>
+                  <a href={proyecto.enlaceNetlify} target="_blank" rel="noreferrer" className="w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-cyan-500 hover:text-black transition-all">
+                    <IconExternalLink size={18} />
+                  </a>
+                </div>
+              </div>
+
+              <p className="text-sm font-light mb-8 text-white/50 leading-relaxed">
+                {proyecto.descripcion}
+              </p>
+
+              <div className="mt-auto flex items-center justify-between">
+                <div className="flex flex-wrap gap-2">
+                  {proyecto.tecnologias.split(',').map((tech, i) => (
+                    <span key={i} className="text-[10px] font-mono px-2 py-1 bg-white/5 rounded text-white/50 border border-white/5 uppercase">
+                      {tech.trim()}
+                    </span>
+                  ))}
+                </div>
+                <IconTrendingUp size={20} className="text-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+              </div>
             </div>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
