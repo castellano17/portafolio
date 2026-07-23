@@ -5,7 +5,7 @@ import { DIGITAL_CARD_URL, GITHUB_URL, LINKEDIN_URL } from "../util/links";
 
 const About = ({ translations, language }) => {
   return (
-    <section id="about" className="py-32">
+    <section id="about" className="py-16 md:py-32">
       <div className="grid md:grid-cols-12 gap-16 items-start">
         <div className="md:col-span-7">
           <h2 className="font-heading text-sm uppercase tracking-[0.3em] text-cyan-500 mb-6">

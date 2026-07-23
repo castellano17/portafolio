@@ -1,9 +1,22 @@
-import React, { memo, useMemo } from "react";
-import { IconSchool, IconArrowUpRight, IconCalendar } from "@tabler/icons-react";
+import React, { memo, useMemo, useState } from "react";
+import { IconSchool, IconArrowUpRight, IconCalendar, IconChevronDown } from "@tabler/icons-react";
 
 const Estudies = ({ translations, studiesTranslations }) => {
+  const [showAll, setShowAll] = useState(false);
+
+  const estudiosDestacados = useMemo(
+    () => studiesTranslations.filter((studie) => studie.destacado),
+    [studiesTranslations]
+  );
+
+  const estudiosVisibles = showAll || estudiosDestacados.length === 0
+    ? studiesTranslations
+    : estudiosDestacados;
+
+  const hayMasEstudios = !showAll && estudiosVisibles.length < studiesTranslations.length;
+
   const studiesList = useMemo(() => {
-    return studiesTranslations.map((studie) => (
+    return estudiosVisibles.map((studie) => (
       <div
         key={studie.id}
         className="glass glass-highlight rounded-3xl flex flex-col items-start group p-8 hover:border-cyan-500/30 transition-all"
@@ -36,10 +49,10 @@ const Estudies = ({ translations, studiesTranslations }) => {
         </a>
       </div>
     ));
-  }, [studiesTranslations]);
+  }, [estudiosVisibles, translations]);
 
   return (
-    <section id="estudies" className="py-32">
+    <section id="estudies" className="py-16 md:py-32">
       <div className="grid md:grid-cols-12 gap-10 mb-16 items-end">
         <div className="md:col-span-7">
           <h2 className="font-heading text-sm uppercase tracking-[0.3em] text-cyan-500 mb-4">{translations.aboutMe.studes.background}</h2>
@@ -58,6 +71,18 @@ const Estudies = ({ translations, studiesTranslations }) => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {studiesList}
       </div>
+
+      {hayMasEstudios && (
+        <div className="flex justify-center mt-12">
+          <button
+            onClick={() => setShowAll(true)}
+            className="glass px-8 py-4 rounded-full font-heading font-medium text-sm tracking-wider uppercase hover:bg-primary/10 transition-all flex items-center gap-3 group"
+          >
+            {translations.aboutMe.studes.loadMore}
+            <IconChevronDown size={18} className="text-cyan-400 group-hover:translate-y-0.5 transition-transform" />
+          </button>
+        </div>
+      )}
     </section>
   );
 };

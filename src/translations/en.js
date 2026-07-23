@@ -43,6 +43,7 @@ export const en = {
         "Certified Full-Stack Engineering and specialized certifications in modern frameworks.",
       background: "Academic Background",
       credentials: "Credentials",
+      loadMore: "Load More",
     },
     button: "Download",
   },
@@ -93,6 +94,7 @@ export const en = {
     all: "All",
     frontend: "Front-End",
     backend: "Back-End",
+    loadMore: "Load More",
   },
 
   Experience: {

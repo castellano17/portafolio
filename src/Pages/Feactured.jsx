@@ -1,11 +1,13 @@
 import React, { useState, useCallback, useMemo, memo } from "react";
-import { IconBrandGithub, IconExternalLink, IconTrendingUp } from "@tabler/icons-react";
+import { IconBrandGithub, IconExternalLink, IconTrendingUp, IconChevronDown } from "@tabler/icons-react";
 
 const Feactured = ({ translations, frontEndTranslations }) => {
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState("all");
+  const [showAll, setShowAll] = useState(false);
 
   const handleFilter = useCallback((categoria) => {
     setCategoriaSeleccionada(categoria);
+    setShowAll(false);
   }, []);
 
   const proyectosFiltrados = useMemo(() => {
@@ -16,8 +18,19 @@ const Feactured = ({ translations, frontEndTranslations }) => {
         );
   }, [categoriaSeleccionada, frontEndTranslations]);
 
+  const proyectosDestacados = useMemo(
+    () => proyectosFiltrados.filter((proyecto) => proyecto.destacado),
+    [proyectosFiltrados]
+  );
+
+  const proyectosVisibles = showAll || proyectosDestacados.length === 0
+    ? proyectosFiltrados
+    : proyectosDestacados;
+
+  const hayMasProyectos = !showAll && proyectosVisibles.length < proyectosFiltrados.length;
+
   return (
-    <section id="projects" className="py-32">
+    <section id="projects" className="py-16 md:py-32">
       <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-16 gap-10">
         <div>
           <h2 className="font-heading text-sm uppercase tracking-[0.3em] text-cyan-500 mb-4">
@@ -50,7 +63,7 @@ const Feactured = ({ translations, frontEndTranslations }) => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {proyectosFiltrados.map((proyecto) => (
+        {proyectosVisibles.map((proyecto) => (
           <div key={proyecto.id} className="glass glass-highlight group flex flex-col rounded-3xl overflow-hidden">
             <div className="relative aspect-video overflow-hidden">
               <img
@@ -95,6 +108,18 @@ const Feactured = ({ translations, frontEndTranslations }) => {
           </div>
         ))}
       </div>
+
+      {hayMasProyectos && (
+        <div className="flex justify-center mt-12">
+          <button
+            onClick={() => setShowAll(true)}
+            className="glass px-8 py-4 rounded-full font-heading font-medium text-sm tracking-wider uppercase hover:bg-primary/10 transition-all flex items-center gap-3 group"
+          >
+            {translations.project.loadMore}
+            <IconChevronDown size={18} className="text-cyan-400 group-hover:translate-y-0.5 transition-transform" />
+          </button>
+        </div>
+      )}
     </section>
   );
 };

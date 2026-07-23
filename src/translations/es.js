@@ -44,6 +44,7 @@ export const es = {
         "Formación certificada en ingeniería Full-Stack y certificaciones especializadas en frameworks modernos.",
       background: "Formación Académica",
       credentials: "Credenciales",
+      loadMore: "Cargar más",
     },
     button: "Descargar",
   },
@@ -94,6 +95,7 @@ export const es = {
     all: "Todos",
     frontend: "Front-End",
     backend: "Back-End",
+    loadMore: "Cargar más",
   },
 
   Experience: {

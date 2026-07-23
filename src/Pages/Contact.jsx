@@ -39,7 +39,7 @@ const Contact = ({ translations }) => {
   };
 
   return (
-    <section id="contact" className="py-32">
+    <section id="contact" className="py-16 md:py-32">
       <div className="glass glass-highlight rounded-[40px] overflow-hidden grid md:grid-cols-2 min-h-[600px]">
         <div className="p-12 md:p-16 flex flex-col justify-center bg-gradient-to-br from-cyan-950/20 to-transparent">
           <h2 className="font-heading text-sm uppercase tracking-[0.3em] text-cyan-500 mb-6">{translations.contact.protocol}</h2>

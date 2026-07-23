@@ -1,6 +1,7 @@
 export const studiesEs = [
   {
     id: 1,
+    destacado: true,
     institution: "ACADEMLO",
     date: "2022-2023",
     description: "Desarrollador web  Full Stack",
@@ -9,6 +10,7 @@ export const studiesEs = [
   },
   {
     id: 2,
+    destacado: true,
     institution: "ACADEMLO",
     date: "2023",
     description: "Desarrollador Back-End con Node.js",
@@ -17,6 +19,7 @@ export const studiesEs = [
   },
   {
     id: 3,
+    destacado: true,
     institution: "ACADEMLO",
     date: "2023",
     description: "Desarrollo de aplicaciones web con React",
@@ -89,6 +92,7 @@ export const studiesEs = [
   },
   {
     id: 12,
+    destacado: true,
     institution: "Microsoft",
     date: "2020",
     description: "Certificación Internacional de Analista de Datos Asociado ",
@@ -105,6 +109,7 @@ export const studiesEs = [
   },
   {
     id: 14,
+    destacado: true,
     institution: "Universidad URACCAN",
     date: "2012-2016",
     description: "Licenciatura en Informática Administrativa",
@@ -116,6 +121,7 @@ export const studiesEs = [
 export const studiesEN = [
   {
     id: 1,
+    destacado: true,
     institution: "ACADEMLO",
     date: "2022-2023",
     description: "Full Stack Web Development",
@@ -124,6 +130,7 @@ export const studiesEN = [
   },
   {
     id: 2,
+    destacado: true,
     institution: "ACADEMLO",
     date: "2023",
     description: "Back-End Development with Node.js",
@@ -132,6 +139,7 @@ export const studiesEN = [
   },
   {
     id: 3,
+    destacado: true,
     institution: "Academlo",
     date: "2023",
     description: "Web application development with React",
@@ -205,6 +213,7 @@ export const studiesEN = [
 
   {
     id: 12,
+    destacado: true,
     institution: "Microsoft",
     date: "2020",
     description: "International Certification Data Analyst Associate",
@@ -221,6 +230,7 @@ export const studiesEN = [
   },
   {
     id: 14,
+    destacado: true,
     institution: " URACCAN University",
     date: "2012-2016",
     description: "Bachelor's Degree in Administrative Informatics",

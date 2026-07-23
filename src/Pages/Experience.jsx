@@ -64,7 +64,7 @@ const Experience = ({ translations, experienceTranslations }) => {
   }, [experienceTranslations]);
 
   return (
-    <section id="experience" className="py-32">
+    <section id="experience" className="py-16 md:py-32">
       <div className="text-center mb-20">
         <h2 className="font-heading text-sm uppercase tracking-[0.3em] text-cyan-500 mb-4">{translations.Experience.subtitle}</h2>
         <h3 className="font-heading text-4xl md:text-5xl font-bold">{translations.Experience.title}</h3>

@@ -1,6 +1,7 @@
 export const proyectosES = [
   {
     id: 1,
+    destacado: true,
     titulo: "Planificador de Gastos",
     descripcion:
       "Puedes planificar tus gastos, filtrar por categorías, cuenta con un panel para visualizar el monto disponible y gastado. ",
@@ -14,6 +15,7 @@ export const proyectosES = [
   },
   {
     id: 2,
+    destacado: true,
     titulo: "Citas veterinaria",
     descripcion:
       "Aplicación donde puedes realizar seguimiento de citas a los pacientes de una veterinaria, editarlos y eliminarlos",
@@ -27,6 +29,7 @@ export const proyectosES = [
 
   {
     id: 3,
+    destacado: true,
     titulo: "Aplicación del clima",
     descripcion:
       "Aplicación donde puedes ver el clima de tu localización y consultar el clima de otra ciudad",
@@ -105,6 +108,7 @@ export const proyectosES = [
   },
   {
     id: 10,
+    destacado: true,
     titulo: "MiFinanzs",
     descripcion:
       " Proyecto diseñado para ayudarte a llevar un control efectivo de tus finanzas personales de manera sencilla y eficiente",
@@ -142,6 +146,7 @@ export const proyectosES = [
   },
   {
     id: 13,
+    destacado: true,
     titulo: "Control de Gastos",
     descripcion: "Api de app de control de gastos para consumir.",
     tecnologias:
@@ -153,6 +158,7 @@ export const proyectosES = [
   },
   {
     id: 14,
+    destacado: true,
     titulo: "Instagram Clone API",
     descripcion: "Api clon de Instagram.",
     tecnologias:
@@ -189,6 +195,7 @@ export const proyectosES = [
 export const proyectosEn = [
   {
     id: 1,
+    destacado: true,
     titulo: "Expense Planner",
     descripcion:
       "Application where you can plan your expenses, filter by categories, has a panel to visualize the available and spent amount.",
@@ -202,6 +209,7 @@ export const proyectosEn = [
   },
   {
     id: 2,
+    destacado: true,
     titulo: "Veterinary appointments",
     descripcion:
       "Application where you can track appointments for veterinary patients, edit them, and delete them",
@@ -215,6 +223,7 @@ export const proyectosEn = [
 
   {
     id: 3,
+    destacado: true,
     titulo: "Weather application",
     descripcion:
       "Application where you can view the weather of your location and check the weather of another city",
@@ -293,6 +302,7 @@ export const proyectosEn = [
   },
   {
     id: 10,
+    destacado: true,
     titulo: "MiFinanzs",
     descripcion:
       "Project designed to help you maintain effective control of your personal finances in a simple and efficient manner.",
@@ -330,6 +340,7 @@ export const proyectosEn = [
   },
   {
     id: 13,
+    destacado: true,
     titulo: "Expense Planner",
     descripcion: "Expense control app API for consumption.",
     tecnologias:
@@ -341,6 +352,7 @@ export const proyectosEn = [
   },
   {
     id: 14,
+    destacado: true,
     titulo: "Instagram Clone API",
     descripcion: "Api Instagram clon",
     tecnologias:
