@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { IconMail, IconBrandWhatsapp, IconSend, IconAlertTriangle } from "@tabler/icons-react";
+import { IconMail, IconBrandWhatsapp, IconSend, IconAlertTriangle, IconId, IconArrowUpRight } from "@tabler/icons-react";
 
 const FORM_ENDPOINT = "https://formsubmit.co/ajax/e3ed59455143d2ead7e46b3282428262";
 const WHATSAPP_NUMBER = "50586498505";
 const CONTACT_EMAIL = "castellano17@gmail.com";
+const DIGITAL_CARD_URL = "https://vinkard.com/vinkard/esmir";
 
 const Contact = ({ translations }) => {
   const [status, setStatus] = useState("idle");
@@ -63,7 +64,18 @@ const Contact = ({ translations }) => {
 
           <div className="pt-12 mt-12 border-t border-primary/5">
             <span className="text-xs font-mono uppercase tracking-widest text-primary/40">{translations.contact.base}</span>
-            <p className="text-lg font-heading font-bold">{translations.contact.location}</p>
+            <p className="text-lg font-heading font-bold mb-8">{translations.contact.location}</p>
+
+            <a
+              href={DIGITAL_CARD_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="glass inline-flex items-center gap-3 px-6 py-3 rounded-full font-heading font-medium text-sm tracking-wider uppercase hover:bg-primary/10 transition-all group"
+            >
+              <IconId size={18} className="text-cyan-400" />
+              {translations.contact.digitalCard}
+              <IconArrowUpRight size={16} className="text-cyan-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            </a>
           </div>
         </div>
 

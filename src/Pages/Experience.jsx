@@ -11,7 +11,7 @@ const Experience = ({ translations, experienceTranslations }) => {
       if (!el) return;
       const rect = el.getBoundingClientRect();
       const vh = window.innerHeight;
-      const p = (vh - rect.top) / (vh + rect.height);
+      const p = (vh * 0.5 - rect.top) / rect.height;
       setProgress(Math.min(Math.max(p, 0), 1));
     };
     handleScroll();
@@ -73,7 +73,7 @@ const Experience = ({ translations, experienceTranslations }) => {
       <div className="relative" ref={timelineRef}>
         <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-primary/10 hidden md:block" />
         <div
-          className="absolute left-1/2 -translate-x-1/2 top-0 w-px bg-cyan-500 shadow-[0_0_8px_rgba(0,255,255,0.6)] hidden md:block transition-[height] duration-150 ease-out"
+          className="absolute left-1/2 -translate-x-1/2 top-0 w-px bg-cyan-500 shadow-[0_0_8px_rgba(0,255,255,0.6)] hidden md:block"
           style={{ height: `${progress * 100}%` }}
         />
         <div className="space-y-16">

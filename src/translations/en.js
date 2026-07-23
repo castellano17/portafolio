@@ -56,6 +56,7 @@ export const en = {
     whatsappMessage: "Hi Esmir! I saw your portfolio and would like to talk about a project.",
     emailSubject: "Contact from your portfolio",
     emailBody: "Hi Esmir! I saw your portfolio and would like to talk about a project.",
+    digitalCard: "Digital Business Card",
     success: {
       title: "MESSAGE SENT.",
       subtitle: "Thanks for reaching out.",
