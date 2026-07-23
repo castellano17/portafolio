@@ -51,7 +51,7 @@ const Home = ({
           <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-[radial-gradient(circle,_rgba(0,255,255,0.1)_0%,_transparent_70%)] blur-[100px]" />
         </div>
 
-        <div className="relative z-10 flex-1 flex flex-col items-center justify-center text-center max-w-4xl mx-auto">
+        <div className="relative z-10 flex-1 w-full flex flex-col items-center justify-center text-center max-w-4xl mx-auto">
           <div className="mb-4 flex items-center gap-2 px-4 py-1.5 glass rounded-full">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75" />
